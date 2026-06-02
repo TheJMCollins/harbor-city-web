@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/nextsteps)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/groups)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/dreamteam)",
+      "Bash(npx astro *)",
+      "Bash(node -e \"const pkg=require\\('/Users/godfrey/Downloads/harbor-city-web/node_modules/@astrojs/cloudflare/package.json'\\); console.log\\(pkg.version\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/your-story)",
+      "Bash(pkill -f \"astro dev\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/blog)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/blog/give-us-one-year)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/blog/keep-showing-up)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/)",
+      "Bash(node *)"
+    ]
+  }
+}

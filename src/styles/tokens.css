@@ -1,0 +1,151 @@
+/* ========================================
+   Harbor City Church — Design Tokens v2.0
+   Source of truth: Build Brief v2.0 (OL: 2f7f308e)
+   Main Brand Design Guide v1.1 (OL: 57fedd2b)
+   ======================================== */
+
+:root {
+  /* -------- MAIN BRAND RAW TOKENS -------- */
+  --hcc-harbor-navy: #1B3A5F;
+  --hcc-midnight:    #0E1B2E;
+  --hcc-navy-mid:    #152640;
+  --hcc-gold:        #C8A96E;
+  --hcc-gold-light:  #D4B87A;
+  --hcc-cream:       #FAF8F5;
+  --hcc-text:        #2A2520;
+  --hcc-text-light:  #6B6560;
+  --hcc-warm-gray:   #9A958D;
+  --hcc-white:       #FFFFFF;
+  --hcc-footer:      #080E18; /* near-black from HTML footer */
+
+  /* -------- MAIN BRAND TYPOGRAPHY -------- */
+  --hcc-font-display: 'Cormorant Garamond', Georgia, serif;
+  --hcc-font-sans:    'Outfit', -apple-system, 'Segoe UI', sans-serif;
+
+  /* -------- SPACING SCALE (8px base) -------- */
+  --space-1:  8px;
+  --space-2:  16px;
+  --space-3:  24px;
+  --space-4:  32px;
+  --space-6:  48px;
+  --space-8:  64px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* -------- CONTAINERS -------- */
+  --container-narrow:  720px;
+  --container-default: 1200px;
+  --container-wide:    1440px;
+
+  /* -------- TYPE SCALE -------- */
+  --text-xs:   0.875rem;  /* 14px — captions, eyebrows */
+  --text-sm:   1rem;      /* 16px — UI labels, small body */
+  --text-base: 1.125rem;  /* 18px — body default */
+  --text-lg:   1.25rem;   /* 20px — lead */
+  --text-xl:   1.5rem;    /* 24px — subheads */
+  --text-2xl:  1.875rem;  /* 30px — small headlines */
+  --text-3xl:  2.625rem;  /* 42px — section headlines */
+  --text-4xl:  3.5rem;    /* 56px — large sections */
+  --text-5xl:  4.5rem;    /* 72px — hero */
+  --text-6xl:  6rem;      /* 96px — display hero */
+  --text-7xl:  8.75rem;   /* 140px — display max */
+
+  --leading-tight:  1.05;
+  --leading-snug:   1.25;
+  --leading-normal: 1.55;
+  --leading-loose:  1.75;
+
+  /* -------- RADIUS -------- */
+  --radius-none: 0;
+  --radius-sm:   2px;  /* HTML uses this — editorial, subtle */
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 9999px;
+
+  /* -------- MOTION -------- */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* -------- HERO GRADIENT (from HTML, verbatim) -------- */
+  --hero-gradient: linear-gradient(
+    165deg,
+    #0E1B2E 0%,
+    #1B3A5F 40%,
+    #2A4A6F 70%,
+    #0E1B2E 100%
+  );
+
+  /* -------- SEMANTIC ALIASES (main brand defaults) -------- */
+  --color-bg:           var(--hcc-cream);
+  --color-bg-alt:       var(--hcc-white);
+  --color-bg-dark:      var(--hcc-midnight);
+  --color-bg-footer:    var(--hcc-footer);
+  --color-brand:        var(--hcc-harbor-navy);
+  --color-accent:       var(--hcc-gold);
+  --color-accent-hover: var(--hcc-gold-light);
+  --color-text:         var(--hcc-text);
+  --color-text-muted:   var(--hcc-text-light);
+  --color-text-meta:    var(--hcc-warm-gray);
+  --color-text-invert:  var(--hcc-white);
+
+  --font-display: var(--hcc-font-display);
+  --font-sans:    var(--hcc-font-sans);
+  --font-body:    var(--hcc-font-sans);
+}
+
+/* ========================================
+   MINISTRY RAW TOKENS
+   (aliases re-pointed inside brands.css scopes)
+   ======================================== */
+
+:root {
+  /* ---- NextGen (Youth) ---- */
+  --nextgen-strong: #263570;
+  --nextgen-future: #67C6E3;
+  --nextgen-unity:  #21572D;
+  --nextgen-hope:   #EAF0F5;
+  --nextgen-font-display: 'Poppins', -apple-system, sans-serif;
+  --nextgen-font-sans:    'DM Sans', -apple-system, sans-serif;
+
+  /* ---- Dream Team (TEAMS) ---- */
+  --teams-sun:      #FFA800;
+  --teams-bluesky:  #507FEE;
+  --teams-sunshine: #FF2D00;
+  --teams-black:    #000000;
+  --teams-font-display: 'Oswald', Impact, sans-serif;
+  --teams-font-sans:    'Inter', -apple-system, sans-serif;
+
+  /* ---- Next Steps ---- */
+  --nextsteps-rhythm:     #262A44;
+  --nextsteps-sky:        #88B8EF;
+  --nextsteps-fire:       #E35C3F;
+  --nextsteps-gold:       #F3BF5F;
+  --nextsteps-gold-light: #F8E0B8;
+  --nextsteps-font-display: 'Poppins', -apple-system, sans-serif;
+  --nextsteps-font-sans:    'Libre Franklin', -apple-system, sans-serif;
+
+  /* ---- Harbor Kids ---- */
+  --kids-teal:  #004F53;
+  --kids-brick: #C56000;
+  --kids-cream: #FFD38A;
+  --kids-sun:   #FFA400;
+  --kids-pink:  #F4B8AE;
+  --kids-apple: #B1342F;
+  --kids-dark:  #221F20;
+  --kids-peach: #FF844B;
+  --kids-font-display: 'DM Serif Display', Georgia, serif;
+  --kids-font-sans:    'Manrope', -apple-system, sans-serif;
+
+  /* ---- Groups ---- */
+  --groups-jade:       #2BBA53;
+  --groups-navy:       #05313F;
+  --groups-sunlight:   #DBC800;
+  --groups-offwhite:   #D7D5C7;
+  --groups-strawberry: #E65C32;
+  --groups-spring:     #F09FC5;
+  --groups-font-display: 'Fraunces', Georgia, serif;
+  --groups-font-sans:    'Manrope', -apple-system, sans-serif;
+  --groups-font-body:    'Source Serif 4', Georgia, serif;
+}

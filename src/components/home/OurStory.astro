@@ -1,0 +1,128 @@
+---
+import SectionLabel from '../global/SectionLabel.astro';
+---
+
+<section id="about" class="about-section">
+  <div class="about">
+    <div class="reveal">
+      <SectionLabel>Our Story</SectionLabel>
+      <h2 class="section-title">A place where everyone belongs.</h2>
+      <p class="section-body">
+        What started in 2001 as a small gathering of faithful hearts has grown into a
+        community that reaches across the Baltimore region. Harbor City exists for one
+        reason: to help you know God, find freedom, discover your purpose, and make a
+        difference.
+      </p>
+      <p class="section-body" style="margin-top: 20px;">
+        Founded by Pastor Michael and Lisa Collins, Harbor City carries a legacy of
+        faith that stretches from Rhema Bible Training College to the halls of
+        Lakewood Church — and now to the harbor city of Baltimore.
+      </p>
+      <a href="/our-story" class="section-cta">Read Our Story</a>
+    </div>
+    <div class="about-image reveal" style="animation-delay: 0.2s;"></div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: 120px 48px;
+    background: var(--hcc-cream);
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: var(--hcc-text);
+  }
+
+  .section-body {
+    font-family: var(--hcc-font-sans);
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--hcc-text-light);
+    line-height: 1.8;
+    max-width: 560px;
+  }
+
+  .section-cta {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    margin-top: 32px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--hcc-gold);
+    transition: color 0.3s;
+  }
+
+  .section-cta:hover {
+    color: var(--hcc-gold);
+  }
+
+  .about-image {
+    width: 100%;
+    height: 500px;
+    background:
+      linear-gradient(135deg, var(--hcc-midnight) 0%, var(--hcc-harbor-navy) 100%)
+      url('/images/home/pastors.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-image::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(14, 27, 46, 0.85) 0%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .about-image::after {
+    content: 'Pastor Michael & Lisa Collins';
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-family: var(--hcc-font-sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--hcc-gold-light);
+    z-index: 2;
+  }
+
+  @media (max-width: 1024px) {
+    .about {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 80px 24px;
+    }
+  }
+</style>

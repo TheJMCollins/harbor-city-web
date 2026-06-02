@@ -1,0 +1,140 @@
+---
+import SectionLabel from '../global/SectionLabel.astro';
+
+/**
+ * Homepage Connect trio — UPDATED FOR v2.0 SITEMAP:
+ *   - Groups (was Small Groups) → /groups  (promoted to top-level)
+ *   - Growth Track           → /growth-track
+ *   - Dream Team (was Serve) → /dreamteam  (promoted to top-level, TEAMS brand)
+ *
+ * This mirrors Union Church's Connect pattern — intentional alignment
+ * per Build Brief Part 1.1.
+ */
+const cards = [
+  {
+    title: 'Groups',
+    body:
+      "Life is better together. Find a group of people who will walk alongside you — through the highs, the lows, and everything in between.",
+    cta: 'Find a Group',
+    href: '/groups',
+  },
+  {
+    title: 'Growth Track',
+    body:
+      'Discover your gifts, your personality, and your purpose. Our Growth Track helps you find exactly where you fit in the body of Christ.',
+    cta: 'Start the Track',
+    href: '/growth-track',
+  },
+  {
+    title: 'Dream Team',
+    body:
+      'The best way to grow is to give. Join a team and use your gifts to make a difference — in the church and in the community.',
+    cta: 'Join a Team',
+    href: '/dreamteam',
+  },
+];
+---
+
+<section id="connect" class="connect-section">
+  <div class="reveal">
+    <SectionLabel>Get Connected</SectionLabel>
+    <h2 class="section-title">There's a place for you here.</h2>
+  </div>
+
+  <div class="connect-grid reveal">
+    {
+      cards.map((card) => (
+        <div class="connect-card">
+          <h3>{card.title}</h3>
+          <p>{card.body}</p>
+          <a href={card.href} class="section-cta">
+            {card.cta}
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .connect-section {
+    background: var(--hcc-white);
+    padding: 120px 48px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--hcc-text);
+    margin-bottom: 24px;
+  }
+
+  .connect-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 64px;
+  }
+
+  .connect-card {
+    text-align: left;
+    padding: 40px;
+    background: var(--hcc-cream);
+    transition: transform 0.3s;
+  }
+
+  .connect-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .connect-card h3 {
+    font-family: var(--hcc-font-display);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--hcc-midnight);
+    margin-bottom: 12px;
+  }
+
+  .connect-card p {
+    font-family: var(--hcc-font-sans);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--hcc-text-light);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .section-cta {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--hcc-gold);
+    transition: color 0.3s;
+  }
+
+  .section-cta:hover {
+    color: var(--hcc-gold);
+  }
+
+  @media (max-width: 1024px) {
+    .connect-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .connect-section {
+      padding: 80px 24px;
+    }
+  }
+</style>

@@ -1,0 +1,150 @@
+---
+import SectionLabel from '../global/SectionLabel.astro';
+
+/**
+ * "This Sunday" sermon feature. The date is hardcoded to match the HTML
+ * reference; future iteration will pull the most recent entry from the
+ * sermons content collection.
+ */
+---
+
+<section id="watch" class="sermon-section">
+  <div class="sermon-feature reveal">
+    <div class="sermon-video">
+      <div class="play-btn"></div>
+    </div>
+
+    <div>
+      <SectionLabel>This Sunday</SectionLabel>
+      <p class="sermon-meta">January 19, 2026</p>
+      <h2 class="section-title">Sunday Morning Service</h2>
+      <p class="section-body">
+        Missed a message? Watch the latest from Harbor City and stay encouraged
+        throughout the week.
+      </p>
+      <a href="/sermons" class="section-cta">Watch All Sermons</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sermon-section {
+    background: var(--hcc-cream);
+    padding: 120px 48px;
+  }
+
+  .sermon-feature {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .sermon-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--hcc-midnight);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .sermon-video::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, var(--hcc-midnight) 0%, var(--hcc-harbor-navy) 100%);
+  }
+
+  .play-btn {
+    position: relative;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    border: 1px solid var(--hcc-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+
+  .play-btn:hover {
+    background: rgba(200, 169, 110, 0.15);
+  }
+
+  .play-btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 18px;
+    border-color: transparent transparent transparent var(--hcc-gold);
+    margin-left: 4px;
+  }
+
+  .sermon-meta {
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--hcc-warm-gray);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--hcc-text);
+    margin-bottom: 24px;
+  }
+
+  .section-body {
+    font-family: var(--hcc-font-sans);
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--hcc-text-light);
+    line-height: 1.8;
+    max-width: 560px;
+  }
+
+  .section-cta {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    margin-top: 32px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--hcc-gold);
+    transition: color 0.3s;
+  }
+
+  .section-cta:hover {
+    color: var(--hcc-gold);
+  }
+
+  @media (max-width: 1024px) {
+    .sermon-feature {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sermon-section {
+      padding: 80px 24px;
+    }
+  }
+</style>

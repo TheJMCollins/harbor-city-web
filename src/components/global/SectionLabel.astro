@@ -1,0 +1,42 @@
+---
+/**
+ * Section label — "OUR STORY —" style eyebrow.
+ *
+ * Universal pattern from the Build Brief: every main-brand section opens
+ * with this. Matches the HTML's .section-label exactly, with the auto ' —'
+ * suffix via ::after.
+ *
+ * Props:
+ *   color — override the label color. Defaults to --color-accent (gold on main brand).
+ */
+export interface Props {
+  color?: string;
+  class?: string;
+}
+
+const { color, class: extraClass = '' } = Astro.props;
+
+const inlineStyle = color ? `color: ${color};` : undefined;
+---
+
+<p
+  class:list={['section-label', extraClass]}
+  style={inlineStyle}
+><slot /></p>
+
+<style>
+  .section-label {
+    font-family: var(--hcc-font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 24px;
+  }
+
+  .section-label::after {
+    content: ' —';
+    color: var(--hcc-warm-gray);
+  }
+</style>

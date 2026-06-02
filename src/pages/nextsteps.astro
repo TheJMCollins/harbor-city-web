@@ -1,0 +1,624 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Generate upcoming 6 Sundays dynamically
+const sundays: string[] = [];
+const d = new Date();
+const dayOfWeek = d.getDay();
+d.setDate(d.getDate() + (dayOfWeek === 0 ? 0 : 7 - dayOfWeek));
+for (let i = 0; i < 6; i++) {
+  sundays.push(
+    d.toLocaleDateString('en-US', {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+    })
+  );
+  d.setDate(d.getDate() + 7);
+}
+---
+
+<BaseLayout
+  title="Next Steps"
+  description="Take your next step at Harbor City Church. Plan your visit — no pressure, no dress code, just come as you are."
+>
+
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <section class="ns-hero">
+    <div class="ns-hero__inner reveal">
+      <p class="ns-eyebrow">You&rsquo;re Not Alone &mdash;</p>
+      <h1 class="ns-headline">Take your next step.</h1>
+      <p class="ns-sub">
+        Whether this is your first time, your first time back, or your next time
+        deeper &mdash; we&rsquo;re glad you&rsquo;re here.
+      </p>
+      <a href="#connect" class="ns-cta-btn">Plan Your Visit</a>
+    </div>
+  </section>
+
+  <!-- ── WHAT TO EXPECT ──────────────────────────────── -->
+  <section class="ns-expect">
+    <div class="ns-inner">
+      <div class="ns-expect__head reveal">
+        <p class="ns-label">What to Expect</p>
+        <h2 class="ns-section-title">A Sunday at Harbor City Church.</h2>
+      </div>
+      <div class="ns-cards reveal">
+        <div class="ns-card">
+          <h3>Sunday at 10:00</h3>
+          <p>
+            Come as you are. Worship is honest, the teaching is plain, and no one
+            will pressure you. Expect about 75 minutes.
+          </p>
+        </div>
+        <div class="ns-card">
+          <h3>Our home</h3>
+          <p>
+            715 E Ordnance Rd, Baltimore. Easy parking. Kids ministry for every age.
+            Coffee is free and actually good.
+          </p>
+        </div>
+        <div class="ns-card">
+          <h3>Your first visit</h3>
+          <p>
+            We&rsquo;ll look for you at the Welcome area, hand you a gift, and help
+            you find a seat. That&rsquo;s it. No walk of shame.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SHALLOW END / DEEP END ──────────────────────── -->
+  <section class="ns-depth">
+    <div class="ns-depth__inner reveal">
+      <h2 class="ns-depth__headline">
+        Harbor City has a shallow end<br />and a deep end.
+      </h2>
+      <p class="ns-depth__sub">
+        You can wade in or jump in &mdash; it&rsquo;s up to you.
+      </p>
+      <p class="ns-depth__body">
+        We meet people wherever they are. Single, married, raising kids, empty
+        nesting, retired &mdash; every season belongs. Some of us are brand new to
+        faith. Some have been walking with Jesus for forty years. Both are
+        welcome. Both will grow.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONY ──────────────────────────────────── -->
+  <section class="ns-testimony">
+    <div class="ns-testimony__inner reveal">
+      <blockquote class="ns-quote">
+        <p>
+          &ldquo;I started at Harbor City when my marriage was falling apart.
+          I didn&rsquo;t know what I believed. I just needed somewhere I could
+          sit and not be judged. Two years later my marriage is whole, I lead a
+          small group, and I read Scripture with my kids every morning.
+          I didn&rsquo;t plan any of that. I just kept showing up.&rdquo;
+        </p>
+        <cite>&mdash; A Harbor City member</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ── GIVE US ONE YEAR ──────────────────────────── -->
+  <section class="ns-year">
+    <div class="ns-year__inner reveal">
+      <h2 class="ns-year__headline">Give us one year.</h2>
+      <p class="ns-year__body">
+        We have a simple challenge for anyone who&rsquo;s serious about starting.
+        Come out to the church and give us one year of your life &mdash; one year
+        in which you hear the word, speak the word, and do the word. One year in
+        which you live the word of God.
+      </p>
+      <p class="ns-year__body">
+        And we guarantee your life will never be the same again.
+      </p>
+      <a href="/your-story" class="ns-year__cta">Take the challenge</a>
+    </div>
+  </section>
+
+  <!-- ── CONNECTION FORM ───────────────────────────── -->
+  <section id="connect" class="ns-form-section">
+    <div class="ns-inner">
+      <div class="ns-form__head reveal">
+        <p class="ns-label">You&rsquo;re Expected</p>
+        <h2 class="ns-section-title">We saved you a seat.</h2>
+      </div>
+
+      <form
+        class="ns-form reveal"
+        action="/api/nextsteps"
+        method="POST"
+      >
+        <div class="ns-field ns-field--half">
+          <label for="ns-name">Name <span aria-hidden="true">*</span></label>
+          <input
+            id="ns-name"
+            name="name"
+            type="text"
+            required
+            autocomplete="given-name"
+            placeholder="Your name"
+          />
+        </div>
+
+        <div class="ns-field ns-field--half">
+          <label for="ns-email">Email <span aria-hidden="true">*</span></label>
+          <input
+            id="ns-email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+            placeholder="you@email.com"
+          />
+        </div>
+
+        <div class="ns-field ns-field--half">
+          <label for="ns-phone">
+            Phone <span class="ns-optional">(optional)</span>
+          </label>
+          <input
+            id="ns-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="(410) 000-0000"
+          />
+        </div>
+
+        <div class="ns-field ns-field--half">
+          <label for="ns-party">
+            How many in your party? <span class="ns-optional">(optional)</span>
+          </label>
+          <input
+            id="ns-party"
+            name="party_size"
+            type="number"
+            min="1"
+            max="20"
+            placeholder="1"
+          />
+        </div>
+
+        <div class="ns-field">
+          <label for="ns-sunday">Which Sunday are you planning to visit?</label>
+          <select id="ns-sunday" name="visit_sunday">
+            <option value="">— Select a Sunday —</option>
+            {sundays.map((s) => <option value={s}>{s}</option>)}
+          </select>
+        </div>
+
+        <div class="ns-field">
+          <label for="ns-note">
+            Anything we should know? <span class="ns-optional">(optional)</span>
+          </label>
+          <textarea
+            id="ns-note"
+            name="note"
+            rows="4"
+            placeholder="Dietary needs, accessibility, questions — anything helps."
+          ></textarea>
+        </div>
+
+        <div class="ns-field ns-field--submit">
+          <button type="submit" class="ns-submit">I&rsquo;m coming</button>
+        </div>
+      </form>
+
+      <p class="ns-form__alt reveal">
+        Prefer email?&ensp;<a href="mailto:hello@harbor.city">hello@harbor.city</a>
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ─── Shared layout ─── */
+  .ns-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ─── Shared label ─── */
+  .ns-label {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 20px;
+  }
+
+  .ns-section-title {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300;
+    line-height: var(--leading-snug);
+    color: var(--hcc-midnight);
+    margin-bottom: 64px;
+  }
+
+  /* ─── Hero ─── */
+  .ns-hero {
+    background: var(--hcc-midnight);
+    padding: 200px 48px 160px;
+    text-align: center;
+  }
+
+  .ns-hero__inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .ns-eyebrow {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 32px;
+  }
+
+  .ns-headline {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(52px, 10vw, 112px);
+    font-weight: 300;
+    line-height: var(--leading-tight);
+    color: var(--hcc-white);
+    margin-bottom: 36px;
+  }
+
+  .ns-sub {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-lg);
+    font-weight: 300;
+    line-height: var(--leading-loose);
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 560px;
+    margin: 0 auto 56px;
+  }
+
+  .ns-cta-btn {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    background: var(--hcc-gold);
+    padding: 16px 48px;
+    transition: opacity var(--duration-base) var(--ease-out);
+  }
+
+  .ns-cta-btn:hover {
+    opacity: 0.85;
+  }
+
+  /* ─── What to Expect ─── */
+  .ns-expect {
+    background: var(--hcc-cream);
+    padding: 120px 0;
+  }
+
+  .ns-expect__head {
+    margin-bottom: 0;
+  }
+
+  .ns-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.07);
+  }
+
+  .ns-card {
+    background: var(--hcc-cream);
+    padding: 48px 40px;
+  }
+
+  .ns-card h3 {
+    font-family: var(--hcc-font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: var(--hcc-midnight);
+    margin-bottom: 16px;
+    line-height: var(--leading-snug);
+  }
+
+  .ns-card p {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    color: var(--hcc-text-light);
+    line-height: var(--leading-loose);
+  }
+
+  /* ─── Shallow end / deep end ─── */
+  .ns-depth {
+    background: var(--hcc-midnight);
+    padding: 120px 48px;
+    text-align: center;
+  }
+
+  .ns-depth__inner {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .ns-depth__headline {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: 300;
+    line-height: var(--leading-snug);
+    color: var(--hcc-white);
+    margin-bottom: 24px;
+  }
+
+  .ns-depth__sub {
+    font-family: var(--hcc-font-display);
+    font-style: italic;
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 48px;
+  }
+
+  .ns-depth__body {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-base);
+    font-weight: 300;
+    line-height: var(--leading-loose);
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  /* ─── Testimony ─── */
+  .ns-testimony {
+    background: var(--hcc-cream);
+    padding: 120px 48px;
+  }
+
+  .ns-testimony__inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .ns-quote p {
+    font-family: var(--hcc-font-display);
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 300;
+    line-height: var(--leading-snug);
+    color: var(--hcc-midnight);
+    margin-bottom: 32px;
+  }
+
+  .ns-quote cite {
+    display: block;
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--hcc-text-light);
+    font-style: normal;
+  }
+
+  /* ─── Give Us One Year ─── */
+  .ns-year {
+    background: var(--hcc-gold);
+    padding: 120px 48px;
+    text-align: center;
+  }
+
+  .ns-year__inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .ns-year__headline {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 300;
+    line-height: var(--leading-tight);
+    color: var(--hcc-midnight);
+    margin-bottom: 32px;
+  }
+
+  .ns-year__body {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-base);
+    font-weight: 300;
+    line-height: var(--leading-loose);
+    color: var(--hcc-midnight);
+    opacity: 0.8;
+    margin-bottom: 16px;
+  }
+
+  .ns-year__body + .ns-year__cta {
+    margin-top: 32px;
+  }
+
+  .ns-year__cta {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hcc-white);
+    background: var(--hcc-midnight);
+    padding: 14px 40px;
+    transition: opacity var(--duration-base) var(--ease-out);
+  }
+
+  .ns-year__cta:hover {
+    opacity: 0.8;
+  }
+
+  /* ─── Connection Form ─── */
+  .ns-form-section {
+    background: var(--hcc-cream);
+    padding: 120px 0;
+  }
+
+  .ns-form__head {
+    margin-bottom: 0;
+  }
+
+  .ns-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    max-width: 760px;
+    margin-bottom: 24px;
+  }
+
+  .ns-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    grid-column: 1 / -1;
+  }
+
+  .ns-field--half {
+    grid-column: span 1;
+  }
+
+  .ns-field label {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+  }
+
+  .ns-optional {
+    font-weight: 300;
+    opacity: 0.5;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .ns-field input,
+  .ns-field select,
+  .ns-field textarea {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-base);
+    font-weight: 300;
+    color: var(--hcc-midnight);
+    background: var(--hcc-white);
+    border: 1px solid rgba(14, 27, 46, 0.15);
+    padding: 14px 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color var(--duration-base);
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .ns-field select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230E1B2E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
+  .ns-field input:focus,
+  .ns-field select:focus,
+  .ns-field textarea:focus {
+    outline: none;
+    border-color: var(--hcc-gold);
+  }
+
+  .ns-field input::placeholder,
+  .ns-field textarea::placeholder {
+    color: var(--hcc-warm-gray);
+  }
+
+  .ns-field textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .ns-field--submit {
+    margin-top: 8px;
+  }
+
+  .ns-submit {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hcc-white);
+    background: var(--hcc-midnight);
+    border: none;
+    padding: 16px 48px;
+    cursor: pointer;
+    transition: opacity var(--duration-base) var(--ease-out);
+  }
+
+  .ns-submit:hover {
+    opacity: 0.8;
+  }
+
+  .ns-form__alt {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    color: var(--hcc-text-light);
+    margin-top: 16px;
+  }
+
+  .ns-form__alt a {
+    color: var(--hcc-gold);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--duration-base);
+  }
+
+  .ns-form__alt a:hover {
+    border-color: var(--hcc-gold);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .ns-hero {
+      padding: 160px 24px 120px;
+    }
+    .ns-inner {
+      padding: 0 24px;
+    }
+    .ns-expect {
+      padding: 80px 0;
+    }
+    .ns-cards {
+      grid-template-columns: 1fr;
+    }
+    .ns-depth,
+    .ns-testimony,
+    .ns-year {
+      padding: 80px 24px;
+    }
+    .ns-form-section {
+      padding: 80px 0;
+    }
+    .ns-form {
+      grid-template-columns: 1fr;
+    }
+    .ns-field--half {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

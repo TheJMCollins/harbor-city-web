@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found"
+  description="The page you're looking for couldn't be found."
+  brand="main"
+>
+  <section class="not-found">
+    <div class="not-found-content">
+      <p class="eyebrow">404 — Not Found</p>
+      <h1>This page wandered off.</h1>
+      <p class="body">
+        The page you're looking for may have been moved, or you may have mistyped the
+        address. Come back to the main page and we'll help you find your way.
+      </p>
+      <a href="/" class="btn">Return Home</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 100vh;
+    background: var(--hcc-midnight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 48px;
+  }
+
+  .not-found-content {
+    max-width: 600px;
+  }
+
+  .eyebrow {
+    font-family: var(--hcc-font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(48px, 7vw, 80px);
+    font-weight: 300;
+    color: var(--hcc-white);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .body {
+    font-family: var(--hcc-font-sans);
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    background: var(--hcc-gold);
+    padding: 16px 48px;
+    transition: all 0.4s;
+  }
+
+  .btn:hover {
+    background: var(--hcc-gold-light);
+    transform: translateY(-2px);
+  }
+</style>

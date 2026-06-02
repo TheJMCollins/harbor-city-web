@@ -1,0 +1,73 @@
+---
+/**
+ * Homepage Vision Promise — sits between Our Story and Mission.
+ *
+ * Pastoral voice moment. No CTA, no body copy. Two stanzas:
+ *   1. The invitation (shallow end / deep end)
+ *   2. The theology (the Word keeps working)
+ *
+ * Canonical copy: OpenLibrary doc 5624cd91-994f-426e-a869-3e05af91088a
+ */
+import SectionLabel from '../global/SectionLabel.astro';
+---
+
+<section class="vision-promise">
+  <div class="reveal">
+    <SectionLabel>A Word from Harbor City</SectionLabel>
+
+    <p class="invitation">
+      Harbor City has a shallow end and a deep end.<br />
+      You can wade in or jump in — it's up to you.
+    </p>
+
+    <p class="theology">
+      Wherever you are, whatever your rhythm,<br />
+      the Word keeps working, and you keep growing.
+    </p>
+  </div>
+</section>
+
+<style>
+  .vision-promise {
+    background: var(--hcc-midnight);
+    padding: 140px 48px 96px;
+    text-align: center;
+  }
+
+  .vision-promise .reveal {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  /* Invitation — the CLAIM. Upright, larger, weightier. */
+  .invitation {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 300;
+    line-height: 1.25;
+    color: var(--hcc-white);
+    margin-bottom: 48px;
+  }
+
+  /* Theology — the WHY. Italic, slightly smaller, more intimate. */
+  .theology {
+    font-family: var(--hcc-font-display);
+    font-style: italic;
+    font-size: clamp(22px, 2.8vw, 30px);
+    font-weight: 300;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  @media (max-width: 768px) {
+    .vision-promise {
+      padding: 96px 24px;
+    }
+
+    /* On mobile, let the line breaks fall naturally instead of forcing them */
+    .invitation br,
+    .theology br {
+      display: none;
+    }
+  }
+</style>

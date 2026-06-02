@@ -1,0 +1,70 @@
+---
+/**
+ * Harbor City Church — Homepage
+ *
+ * Ported from /Users/godfrey/Downloads/HCC-deploy/HCC_index_20260416.html
+ * All inline styles refactored into the token system; body broken into
+ * six section components under src/components/home/.
+ *
+ * Source of truth: Build Brief v2.0 (OpenLibrary: 2f7f308e)
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import OurStory from '../components/home/OurStory.astro';
+import VisionPromise from '../components/home/VisionPromise.astro';
+import Mission from '../components/home/Mission.astro';
+import ThisSunday from '../components/home/ThisSunday.astro';
+import GetConnected from '../components/home/GetConnected.astro';
+import PlanVisitCTA from '../components/home/PlanVisitCTA.astro';
+---
+
+<BaseLayout
+  title="Harbor City Church"
+  description="A community built on faith, rooted in love, and open to everyone. Harbor City Church — 715 E Ordnance Rd, Baltimore, MD. Come as you are."
+  brand="main"
+>
+  <!-- Structured data for SEO -->
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Church',
+        name: 'Harbor City Church',
+        url: 'https://harborcitychurch.com/',
+        logo: 'https://harborcitychurch.com/images/home/hcc-icon-blue.png',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '715 E Ordnance Rd',
+          addressLocality: 'Baltimore',
+          addressRegion: 'MD',
+          postalCode: '21226',
+          addressCountry: 'US',
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: 'Sunday',
+            opens: '10:00',
+            closes: '11:30',
+          },
+        ],
+        sameAs: [
+          'https://facebook.com/harborcitymd',
+          'https://instagram.com/harborcitybaltimore',
+          'https://twitter.com/harborcitybalt',
+          'https://youtube.com/@harborcitybaltimore',
+        ],
+      })}
+    />
+  </Fragment>
+
+  <Hero />
+  <OurStory />
+  <VisionPromise />
+  <Mission />
+  <ThisSunday />
+  <GetConnected />
+  <PlanVisitCTA />
+</BaseLayout>
+–

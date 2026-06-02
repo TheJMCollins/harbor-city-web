@@ -1,0 +1,26 @@
+{
+  "name": "harbor-city-web",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Harbor City Church website — Astro + Cloudflare Pages",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.1.10",
+    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.1.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.0",
+    "prettier-plugin-astro": "^0.14.0",
+    "typescript": "^5.7.0"
+  }
+}

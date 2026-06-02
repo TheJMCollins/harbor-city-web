@@ -1,0 +1,168 @@
+---
+/**
+ * Homepage hero — the gradient + grain + Cormorant headline.
+ * The gradient (#0E1B2E → #1B3A5F → #2A4A6F → #0E1B2E) is the piece
+ * Julius specifically flagged as "what sold me on the design."
+ */
+---
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <p class="hero-label">Harbor City Church &bull; Baltimore, MD</p>
+    <h1>Find your <em>people.</em></h1>
+    <p class="hero-sub">
+      A community built on faith, rooted in love, and open to everyone. Come as you are.
+    </p>
+    <a href="/nextsteps" class="hero-btn">Plan Your Visit</a>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span></span>
+    <p>Scroll</p>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--hero-gradient);
+    z-index: 0;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        ellipse at 30% 50%,
+        rgba(200, 169, 110, 0.08) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at 70% 30%,
+        rgba(255, 255, 255, 0.03) 0%,
+        transparent 50%
+      );
+  }
+
+  .hero-grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 24px;
+  }
+
+  .hero-label {
+    font-family: var(--hcc-font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.3s forwards;
+  }
+
+  .hero h1 {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 300;
+    color: var(--hcc-white);
+    line-height: 1.05;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--hcc-gold-light);
+  }
+
+  .hero-sub {
+    font-family: var(--hcc-font-sans);
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 48px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.7s forwards;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    background: var(--hcc-gold);
+    padding: 16px 48px;
+    transition: all 0.4s;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+  }
+
+  .hero-btn:hover {
+    background: var(--hcc-gold-light);
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.2s forwards;
+  }
+
+  .hero-scroll span {
+    display: block;
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--hcc-gold), transparent);
+    margin: 0 auto;
+  }
+
+  .hero-scroll p {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 48px;
+    }
+  }
+</style>

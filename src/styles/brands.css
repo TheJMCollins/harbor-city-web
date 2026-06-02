@@ -1,0 +1,76 @@
+/* ========================================
+   Per-ministry theme scopes.
+   Activated by data-brand on the page/layout root.
+   Each scope re-points the semantic aliases.
+   Nav & Footer hardcode --hcc-* tokens so they're immune.
+   ======================================== */
+
+[data-brand='nextgen'] {
+  --color-bg:           var(--hcc-white);
+  --color-bg-alt:       var(--nextgen-hope);
+  --color-bg-dark:      var(--nextgen-strong);
+  --color-brand:        var(--nextgen-strong);
+  --color-accent:       var(--nextgen-future);
+  --color-accent-hover: var(--nextgen-future);
+  --color-text:         var(--hcc-text);
+  --color-text-invert:  var(--hcc-white);
+  --font-display:       var(--nextgen-font-display);
+  --font-sans:          var(--nextgen-font-sans);
+  --font-body:          var(--nextgen-font-sans);
+}
+
+[data-brand='dreamteam'] {
+  --color-bg:           var(--hcc-white);
+  --color-bg-alt:       var(--teams-sun);
+  --color-bg-dark:      var(--teams-black);
+  --color-brand:        var(--teams-bluesky);
+  --color-accent:       var(--teams-sunshine);
+  --color-accent-hover: var(--teams-sun);
+  --color-text:         var(--teams-black);
+  --color-text-invert:  var(--hcc-white);
+  --font-display:       var(--teams-font-display);
+  --font-sans:          var(--teams-font-sans);
+  --font-body:          var(--teams-font-sans);
+}
+
+[data-brand='nextsteps'] {
+  --color-bg:           var(--hcc-white);
+  --color-bg-alt:       var(--nextsteps-gold-light);
+  --color-bg-dark:      var(--nextsteps-rhythm);
+  --color-brand:        var(--nextsteps-rhythm);
+  --color-accent:       var(--nextsteps-fire);
+  --color-accent-hover: var(--nextsteps-gold);
+  --color-text:         var(--hcc-text);
+  --color-text-invert:  var(--hcc-white);
+  --font-display:       var(--nextsteps-font-display);
+  --font-sans:          var(--nextsteps-font-sans);
+  --font-body:          var(--nextsteps-font-sans);
+}
+
+[data-brand='harborkids'] {
+  --color-bg:           var(--hcc-white);
+  --color-bg-alt:       var(--kids-cream);
+  --color-bg-dark:      var(--kids-teal);
+  --color-brand:        var(--kids-teal);
+  --color-accent:       var(--kids-brick);
+  --color-accent-hover: var(--kids-apple);
+  --color-text:         var(--kids-dark);
+  --color-text-invert:  var(--hcc-white);
+  --font-display:       var(--kids-font-display);
+  --font-sans:          var(--kids-font-sans);
+  --font-body:          var(--kids-font-sans);
+}
+
+[data-brand='groups'] {
+  --color-bg:           var(--hcc-white);
+  --color-bg-alt:       var(--groups-offwhite);
+  --color-bg-dark:      var(--groups-navy);
+  --color-brand:        var(--groups-navy);
+  --color-accent:       var(--groups-jade);
+  --color-accent-hover: var(--groups-sunlight);
+  --color-text:         var(--groups-navy);
+  --color-text-invert:  var(--hcc-white);
+  --font-display:       var(--groups-font-display);
+  --font-sans:          var(--groups-font-sans);
+  --font-body:          var(--groups-font-body); /* Groups uses serif body */
+}

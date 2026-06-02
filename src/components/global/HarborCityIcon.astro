@@ -1,0 +1,45 @@
+---
+/**
+ * Harbor City Church Icon — canonical sunrise-over-waves mark.
+ *
+ * Source: Blue-HC_Icon.png (Julius's new thicker icon, replacing the
+ * original Yellowbox thin icon that failed at small sizes).
+ *
+ * This component currently renders the PNG directly. When we have the
+ * vector version, swap the <img> for inline <svg> and this component's
+ * API (width, title, color) stays the same.
+ *
+ * Props:
+ *   size    — pixel size (square). Default 32.
+ *   title   — accessible label. Default "Harbor City Church".
+ *   class   — additional classes.
+ */
+export interface Props {
+  size?: number;
+  title?: string;
+  class?: string;
+}
+
+const {
+  size = 32,
+  title = 'Harbor City Church',
+  class: extraClass = '',
+} = Astro.props;
+---
+
+<img
+  src="/images/home/hcc-icon-blue.png"
+  alt={title}
+  width={size}
+  height={size}
+  class:list={['hcc-icon', extraClass]}
+  loading="eager"
+  decoding="async"
+/>
+
+<style>
+  .hcc-icon {
+    display: inline-block;
+    flex-shrink: 0;
+  }
+</style>

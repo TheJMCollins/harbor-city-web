@@ -1,0 +1,130 @@
+---
+import SectionLabel from '../global/SectionLabel.astro';
+
+/**
+ * Harbor City's 4 mission pillars, from the HTML:
+ * Know God / Find Freedom / Discover Purpose / Make a Difference.
+ */
+const pillars = [
+  {
+    title: 'Know God',
+    body:
+      "Experience a personal relationship with Jesus Christ. Knowing God is the foundation for a life fully alive.",
+  },
+  {
+    title: 'Find Freedom',
+    body:
+      "True freedom is found in Christ. We create space for healing, restoration, and the breakthrough you've been praying for.",
+  },
+  {
+    title: 'Discover Purpose',
+    body:
+      'You were created for something. Through our Growth Track, discover your gifts and how God designed you to make an impact.',
+  },
+  {
+    title: 'Make a Difference',
+    body:
+      'God has called each of us to bring hope. Together, we can transform the Baltimore region and beyond.',
+  },
+];
+---
+
+<section id="mission" class="mission">
+  <div class="reveal">
+    <SectionLabel>What We Believe</SectionLabel>
+    <h2 class="section-title">Built on the life and teaching of Jesus.</h2>
+    <p class="section-body">
+      We believe that every person — every age, every background, every story — can
+      find a home in God.
+    </p>
+  </div>
+
+  <div class="mission-grid reveal">
+    {
+      pillars.map((p) => (
+        <div class="mission-card">
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .mission {
+    background: var(--hcc-midnight);
+    padding: 96px 48px;
+    text-align: center;
+  }
+
+  .mission .section-title {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--hcc-white);
+    margin-bottom: 24px;
+  }
+
+  .mission .section-body {
+    font-family: var(--hcc-font-sans);
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.8;
+    margin: 0 auto 64px;
+    max-width: 560px;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .mission-card {
+    padding: 48px 32px;
+    background: var(--hcc-midnight);
+    text-align: left;
+    transition: background 0.4s;
+  }
+
+  .mission-card:hover {
+    background: var(--hcc-navy-mid);
+  }
+
+  .mission-card h3 {
+    font-family: var(--hcc-font-display);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--hcc-gold);
+    margin-bottom: 16px;
+  }
+
+  .mission-card p {
+    font-family: var(--hcc-font-sans);
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1024px) {
+    .mission-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mission {
+      padding: 80px 24px;
+    }
+    .mission-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

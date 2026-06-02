@@ -1,0 +1,146 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  author: string;
+  slug: string;
+  tags: string[];
+}
+
+const { title, description, pubDate, author, slug, tags } = Astro.props;
+
+const tag = tags[0] ?? 'Reflection';
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+});
+---
+
+<article class="blog-card">
+  <div class="blog-card__meta">
+    <span class="blog-card__tag">{tag}</span>
+    <span class="blog-card__dot" aria-hidden="true">&middot;</span>
+    <time class="blog-card__date" datetime={pubDate.toISOString()}>{formattedDate}</time>
+  </div>
+
+  <h2 class="blog-card__title">
+    <a href={`/blog/${slug}`}>{title}</a>
+  </h2>
+
+  <p class="blog-card__desc">{description}</p>
+
+  <div class="blog-card__footer">
+    <span class="blog-card__author">{author}</span>
+    <a href={`/blog/${slug}`} class="blog-card__read" aria-label={`Read ${title}`}>
+      Read &rarr;
+    </a>
+  </div>
+</article>
+
+<style>
+  .blog-card {
+    background: var(--hcc-cream);
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 2px solid var(--hcc-gold);
+    transition: border-color var(--duration-base) var(--ease-out);
+  }
+
+  .blog-card:hover {
+    border-top-color: var(--hcc-harbor-navy);
+  }
+
+  .blog-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .blog-card__tag {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+  }
+
+  .blog-card__dot {
+    color: var(--hcc-warm-gray);
+    font-size: var(--text-xs);
+  }
+
+  .blog-card__date {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 300;
+    color: var(--hcc-warm-gray);
+    letter-spacing: 0.04em;
+  }
+
+  .blog-card__title {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 300;
+    line-height: var(--leading-snug);
+    color: var(--hcc-midnight);
+  }
+
+  .blog-card__title a {
+    transition: color var(--duration-base) var(--ease-out);
+  }
+
+  .blog-card__title a:hover {
+    color: var(--hcc-harbor-navy);
+  }
+
+  .blog-card__desc {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    line-height: var(--leading-loose);
+    color: var(--hcc-text-light);
+    flex-grow: 1;
+  }
+
+  .blog-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid rgba(14, 27, 46, 0.08);
+    margin-top: auto;
+  }
+
+  .blog-card__author {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 400;
+    color: var(--hcc-warm-gray);
+    letter-spacing: 0.06em;
+  }
+
+  .blog-card__read {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    transition: color var(--duration-base) var(--ease-out);
+  }
+
+  .blog-card__read:hover {
+    color: var(--hcc-midnight);
+  }
+
+  @media (max-width: 768px) {
+    .blog-card {
+      padding: 36px 24px;
+    }
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+/**
+ * MinistryLayout — thin wrapper over BaseLayout.
+ *
+ * Exists to make ministry pages declare their brand explicitly
+ * and to give us a single place to add ministry-wide behavior later
+ * (e.g. ministry-specific analytics, breadcrumb chrome, print stylesheets).
+ */
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  brand: 'nextgen' | 'dreamteam' | 'nextsteps' | 'harborkids' | 'groups';
+  ogImage?: string;
+  canonical?: string;
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout {...props}>
+  <slot />
+  <slot name="head" slot="head" />
+</BaseLayout>

@@ -1,0 +1,208 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/blog/BlogCard.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title="Blog"
+  description="Teaching, reflection, and pastoral voice from Harbor City Church — Baltimore."
+  brand="main"
+>
+
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <section class="bl-hero">
+    <div class="bl-hero__inner reveal">
+      <p class="bl-eyebrow">From the Pulpit &mdash;</p>
+      <h1 class="bl-headline">Words for<br />the walk.</h1>
+      <p class="bl-sub">
+        Teaching, reflection, and pastoral voice from Harbor City Church.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── POST GRID ─────────────────────────────────────── -->
+  <section class="bl-posts">
+    <div class="bl-inner">
+      {allPosts.length === 0 ? (
+        <div class="bl-empty reveal">
+          <p>Posts coming soon. Check back after Sunday.</p>
+        </div>
+      ) : (
+        <div class="bl-grid reveal">
+          {allPosts.map((post) => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              pubDate={post.data.pubDate}
+              author={post.data.author}
+              slug={post.id}
+              tags={post.data.tags}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- ── CLOSE ─────────────────────────────────────────── -->
+  <section class="bl-close">
+    <div class="bl-close__inner reveal">
+      <h2 class="bl-close__headline">Ready to take a step?</h2>
+      <p class="bl-close__sub">
+        The blog is one voice from Harbor City Church. Come hear the rest in person.
+      </p>
+      <a href="/nextsteps" class="bl-close__cta">Plan your visit</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ─── Layout ─── */
+  .bl-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ─── Hero ─── */
+  .bl-hero {
+    background: var(--hcc-midnight);
+    padding: 200px 48px 160px;
+    text-align: center;
+  }
+
+  .bl-hero__inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .bl-eyebrow {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 32px;
+  }
+
+  .bl-headline {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(52px, 11vw, 128px);
+    font-weight: 300;
+    line-height: var(--leading-tight);
+    color: var(--hcc-white);
+    margin-bottom: 40px;
+  }
+
+  .bl-sub {
+    font-family: var(--hcc-font-display);
+    font-style: italic;
+    font-size: clamp(18px, 2.2vw, 26px);
+    font-weight: 300;
+    line-height: var(--leading-snug);
+    color: rgba(255, 255, 255, 0.45);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* ─── Post Grid ─── */
+  .bl-posts {
+    background: var(--hcc-cream);
+    padding: 96px 0 120px;
+  }
+
+  .bl-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: rgba(14, 27, 46, 0.06);
+  }
+
+  .bl-empty {
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .bl-empty p {
+    font-family: var(--hcc-font-display);
+    font-style: italic;
+    font-size: var(--text-xl);
+    font-weight: 300;
+    color: var(--hcc-text-light);
+  }
+
+  /* ─── Close ─── */
+  .bl-close {
+    background: var(--hcc-midnight);
+    padding: 120px 48px;
+    text-align: center;
+  }
+
+  .bl-close__inner {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .bl-close__headline {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: 300;
+    line-height: var(--leading-snug);
+    color: var(--hcc-white);
+    margin-bottom: 20px;
+  }
+
+  .bl-close__sub {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-base);
+    font-weight: 300;
+    line-height: var(--leading-loose);
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 48px;
+  }
+
+  .bl-close__cta {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    background: var(--hcc-gold);
+    padding: 16px 48px;
+    transition: opacity var(--duration-base) var(--ease-out);
+  }
+
+  .bl-close__cta:hover {
+    opacity: 0.85;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 900px) {
+    .bl-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bl-hero {
+      padding: 160px 24px 120px;
+    }
+    .bl-inner {
+      padding: 0 24px;
+    }
+    .bl-posts {
+      padding: 72px 0 96px;
+    }
+    .bl-close {
+      padding: 80px 24px;
+    }
+  }
+</style>
