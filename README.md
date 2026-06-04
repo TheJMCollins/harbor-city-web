@@ -165,6 +165,11 @@ Julius has licensed versions of several of these (Balboa Condensed, Owners Text,
 
 ---
 
+---
+
+**Deployment Test - June 4, 2026** ✨
+Triggering Harbor City Church live deployment!
+
 ## Deployment
 
 ### Cloudflare Pages (primary host)
