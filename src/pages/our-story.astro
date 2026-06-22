@@ -273,8 +273,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .os-photo-placeholder {
     width: 100%;
     aspect-ratio: 4 / 5;
-    background: var(--hcc-warm-gray);
-    opacity: 0.18;
+    background-color: var(--hcc-warm-gray);
+    background-size: cover;
+    background-position: center;
+  }
+  .os-beginning__image-area .os-photo-placeholder {
+    background-image: url('/images/our-story/beginning.jpg');
+  }
+  .os-founders__image-area .os-photo-placeholder {
+    background-image: url('/images/our-story/founders.webp');
   }
 
   /* ─── Pull Quote ─── */
