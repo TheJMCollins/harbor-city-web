@@ -157,20 +157,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- ── EVERY SEASON ───────────────────────────────── -->
   <section class="dc-seasons">
     <div class="dc-inner">
-      <div class="dc-seasons__inner reveal">
-        <p class="dc-label">For Every Stage</p>
-        <h2 class="dc-section-title">Every season belongs.</h2>
-        <p class="dc-section-body">
-          Every life has a rhythm. Single life. Married life. Raising kids.
-          Empty-nester life. The slower rhythms of retirement. They don&rsquo;t
-          all look the same, and discipleship doesn&rsquo;t pretend they do.
-        </p>
-        <p class="dc-section-body">
-          What stays the same across every season is the process &mdash; Hear,
-          Speak, Do, Live. How that shows up in your week will look different at
-          25 than at 65. Both are legitimate. Both are growing. Both are
-          Harbor City Church.
-        </p>
+      <div class="dc-seasons__grid reveal">
+        <div class="dc-seasons__text">
+          <p class="dc-label">For Every Stage</p>
+          <h2 class="dc-section-title">Every season belongs.</h2>
+          <p class="dc-section-body">
+            Every life has a rhythm. Single life. Married life. Raising kids.
+            Empty-nester life. The slower rhythms of retirement. They don&rsquo;t
+            all look the same, and discipleship doesn&rsquo;t pretend they do.
+          </p>
+          <p class="dc-section-body">
+            What stays the same across every season is the process &mdash; Hear,
+            Speak, Do, Live. How that shows up in your week will look different at
+            25 than at 65. Both are legitimate. Both are growing. Both are
+            Harbor City Church.
+          </p>
+        </div>
+        <div class="dc-seasons__photo" aria-hidden="true"></div>
       </div>
     </div>
   </section>
@@ -276,12 +279,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   /* ─── Hero ─── */
   .dc-hero {
-    background-color: var(--hcc-midnight);
-    background-image:
-      linear-gradient(180deg, rgba(14,27,46,0.55) 0%, rgba(14,27,46,0.72) 100%),
-      url('/images/heroes/your-story.webp');
-    background-size: cover;
-    background-position: center;
+    background: var(--hcc-midnight);
     padding: 200px 48px 160px;
     text-align: center;
   }
@@ -483,8 +481,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 120px 0;
   }
 
-  .dc-seasons__inner {
-    max-width: 680px;
+  .dc-seasons__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .dc-seasons__text {
+    max-width: 560px;
+  }
+  .dc-seasons__photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 2px;
+    background-color: var(--hcc-warm-gray);
+    background-image: url('/images/heroes/your-story.webp');
+    background-size: cover;
+    background-position: center;
   }
 
   /* ─── Close ─── */
@@ -574,5 +587,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .dc-seasons {
       padding: 80px 0;
     }
+    .dc-seasons__grid { grid-template-columns: 1fr; gap: 40px; }
   }
 </style>
