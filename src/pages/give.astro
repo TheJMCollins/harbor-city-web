@@ -1,0 +1,140 @@
+---
+/**
+ * Harbor City Church — Give
+ *
+ * Online giving via Planning Center. Uses the Church Center modal embed:
+ * the js.churchcenter.com/modal/v1 script (loaded in the head slot) intercepts
+ * the giving link and opens the donation form in a modal on desktop, or a new
+ * tab on mobile. Site is served over HTTPS (Cloudflare Pages), as required.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const GIVING_URL =
+  'https://harborcitychurchbaltimore.churchcenter.com/giving?open-in-church-center-modal=true';
+---
+
+<BaseLayout
+  title="Give"
+  description="Give to Harbor City Church. Your generosity helps people know God, find freedom, discover their purpose, and make a difference in Baltimore. Secure online giving through Planning Center."
+  brand="main"
+>
+  <Fragment slot="head">
+    <script is:inline src="https://js.churchcenter.com/modal/v1"></script>
+  </Fragment>
+
+  <section class="gv-hero">
+    <div class="gv-hero__inner reveal">
+      <p class="gv-eyebrow">Harbor City Church &mdash;</p>
+      <h1 class="gv-headline">Give</h1>
+    </div>
+  </section>
+
+  <section class="gv-body">
+    <div class="gv-inner reveal">
+      <h2 class="gv-title">Generosity changes everything.</h2>
+      <p class="gv-text">
+        Every gift to Harbor City Church helps people know God, find freedom,
+        discover their purpose, and make a difference &mdash; right here in
+        Baltimore and beyond. Thank you for partnering with what God is doing.
+      </p>
+      <a class="gv-button" href={GIVING_URL}>Give Now</a>
+      <p class="gv-note">Secure online giving, powered by Planning Center.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .gv-hero {
+    background: var(--hcc-midnight);
+    padding: 200px 48px 120px;
+    text-align: center;
+  }
+
+  .gv-hero__inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .gv-eyebrow {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 32px;
+  }
+
+  .gv-headline {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(56px, 12vw, 144px);
+    font-weight: 300;
+    line-height: var(--leading-tight);
+    color: var(--hcc-white);
+  }
+
+  .gv-body {
+    background: var(--hcc-cream);
+    padding: 120px 48px;
+    text-align: center;
+  }
+
+  .gv-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .gv-title {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 300;
+    line-height: var(--leading-snug);
+    color: var(--hcc-midnight);
+    margin-bottom: 24px;
+  }
+
+  .gv-text {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-base);
+    font-weight: 300;
+    line-height: var(--leading-loose);
+    color: var(--hcc-text-light);
+    margin-bottom: 48px;
+  }
+
+  .gv-button {
+    display: inline-block;
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hcc-midnight);
+    background: var(--hcc-gold);
+    padding: 18px 56px;
+    transition: all 0.4s;
+  }
+
+  .gv-button:hover {
+    background: var(--hcc-gold-light);
+    transform: translateY(-2px);
+  }
+
+  .gv-note {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    color: var(--hcc-text-light);
+    opacity: 0.7;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 768px) {
+    .gv-hero {
+      padding: 160px 24px 96px;
+    }
+    .gv-body {
+      padding: 80px 24px;
+    }
+  }
+</style>
