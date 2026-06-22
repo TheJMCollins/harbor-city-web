@@ -10,6 +10,9 @@
  *   - Our Story, Your Story, Next Steps, Groups, Dream Team, Give, Blog
  *   - Plan Your Visit CTA → /nextsteps
  *   - Youth (/ministries/youth) and Kids (/ministries/kids) not yet in primary nav
+ *
+ * Mobile: desktop links collapse into a hamburger that opens a full-screen
+ * overlay menu (toggle + Escape + tap-to-close, accessible).
  */
 import HarborCityIcon from './HarborCityIcon.astro';
 ---
@@ -31,7 +34,30 @@ import HarborCityIcon from './HarborCityIcon.astro';
   </ul>
 
   <a href="/nextsteps" class="nav-cta">Plan a Visit</a>
+
+  <button
+    id="nav-toggle"
+    class="nav-toggle"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+  >
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div id="mobile-menu" class="nav-mobile">
+  <ul class="nav-mobile__links">
+    <li><a href="/our-story">Our Story</a></li>
+    <li><a href="/your-story">Your Story</a></li>
+    <li><a href="/nextsteps">Next Steps</a></li>
+    <li><a href="/groups">Groups</a></li>
+    <li><a href="/dreamteam">Dream Team</a></li>
+    <li><a href="/give">Give</a></li>
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+  <a href="/nextsteps" class="nav-mobile__cta">Plan a Visit</a>
+</div>
 
 <style>
   nav {
@@ -114,6 +140,36 @@ import HarborCityIcon from './HarborCityIcon.astro';
     color: var(--hcc-midnight);
   }
 
+  /* Hamburger button — hidden on desktop */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--hcc-white);
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+  }
+
+  /* Mobile overlay menu — hidden on desktop */
+  .nav-mobile {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     nav {
       padding: 20px 24px;
@@ -121,9 +177,95 @@ import HarborCityIcon from './HarborCityIcon.astro';
     .nav-links {
       display: none;
     }
+    .nav-cta {
+      display: none; /* desktop CTA hidden on mobile; it lives inside the menu */
+    }
     .nav-brand span {
       font-size: 16px;
       letter-spacing: 1.5px;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    /* hamburger → X when open */
+    nav.menu-open .nav-toggle span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    nav.menu-open .nav-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+    nav.menu-open .nav-toggle span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      position: fixed;
+      inset: 0;
+      z-index: 105;
+      background: rgba(14, 27, 46, 0.98);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+    .nav-mobile.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-mobile__links {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0 0 36px;
+    }
+
+    .nav-mobile__links li {
+      margin: 20px 0;
+    }
+
+    .nav-mobile__links a {
+      font-family: var(--hcc-font-sans);
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: color 0.3s;
+    }
+
+    .nav-mobile__links a:hover {
+      color: var(--hcc-gold);
+    }
+
+    .nav-mobile__cta {
+      font-family: var(--hcc-font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--hcc-gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 1px solid var(--hcc-gold);
+      padding: 14px 36px;
+      transition: all 0.3s;
+    }
+
+    .nav-mobile__cta:hover {
+      background: var(--hcc-gold);
+      color: var(--hcc-midnight);
     }
   }
 </style>
@@ -137,5 +279,27 @@ import HarborCityIcon from './HarborCityIcon.astro';
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // run once on load in case page reloads mid-scroll
+  }
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu && navEl) {
+    const setOpen = (open) => {
+      navEl.classList.toggle('menu-open', open);
+      menu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    toggle.addEventListener('click', () => {
+      setOpen(!navEl.classList.contains('menu-open'));
+    });
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
+    });
   }
 </script>
