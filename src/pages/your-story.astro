@@ -276,7 +276,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   /* ─── Hero ─── */
   .dc-hero {
-    background: var(--hcc-midnight);
+    background-color: var(--hcc-midnight);
+    background-image:
+      linear-gradient(180deg, rgba(14,27,46,0.55) 0%, rgba(14,27,46,0.72) 100%),
+      url('/images/heroes/your-story.webp');
+    background-size: cover;
+    background-position: center;
     padding: 200px 48px 160px;
     text-align: center;
   }
