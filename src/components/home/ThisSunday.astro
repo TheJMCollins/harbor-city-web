@@ -10,19 +10,18 @@ import SectionLabel from '../global/SectionLabel.astro';
 
 <section id="watch" class="sermon-section">
   <div class="sermon-feature reveal">
-    <div class="sermon-video">
+    <a class="sermon-video" href="https://www.youtube.com/@harborcitychurch" target="_blank" rel="noopener">
       <div class="play-btn"></div>
-    </div>
+    </a>
 
     <div>
-      <SectionLabel>This Sunday</SectionLabel>
-      <p class="sermon-meta">January 19, 2026</p>
+      <SectionLabel>Watch</SectionLabel>
       <h2 class="section-title">Sunday Morning Service</h2>
       <p class="section-body">
         Missed a message? Watch the latest from Harbor City and stay encouraged
         throughout the week.
       </p>
-      <a href="/sermons" class="section-cta">Watch All Sermons</a>
+      <a href="https://www.youtube.com/@harborcitychurch" target="_blank" rel="noopener" class="section-cta">Watch All Sermons</a>
     </div>
   </div>
 </section>
@@ -53,6 +52,7 @@ import SectionLabel from '../global/SectionLabel.astro';
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .sermon-video::before {
