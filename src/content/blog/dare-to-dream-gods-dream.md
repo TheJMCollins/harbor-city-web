@@ -48,7 +48,7 @@ Schools shape belief systems, identity, opportunity, leadership, and long-term o
 
 So yes—we're daring to believe for tuition-free Christian schools in Baltimore through Harbor City Preparatory.
 
-Not as a charity project, but as a Kingdom investment: raising students with wisdom, discipline, character, faith, and real academic excellence—young people who grow up knowing who they are in Christ and what they're here to do.
+Not as a charity project, but as a Kingdom investment: raising students with wisdom, discipline, character, faith, and real academic excellence—young people who grow up knowing who they are In Christ and what they're here to do.
 
 ### 2) The Life Center: Strengthening Homes With Real Help
 

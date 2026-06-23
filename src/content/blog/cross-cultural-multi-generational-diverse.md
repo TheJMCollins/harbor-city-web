@@ -1,6 +1,6 @@
 ---
 title: "Cross-Cultural, Multi-Generational, Economically Diverse"
-description: "From many nations, ages, and economic backgrounds—one family in Christ. At Harbor City, diversity isn't a trend. It's our testimony."
+description: "From many nations, ages, and economic backgrounds—one family In Christ. At Harbor City, diversity isn't a trend. It's our testimony."
 pubDate: 2024-10-07
 author: "Harbor City Church"
 tags: ["diversity", "unity", "church-culture", "kingdom-family", "cross-cultural"]
@@ -32,7 +32,7 @@ The local church is meant to be a preview—an outpost of the Kingdom—where un
 
 Diversity without unity becomes tension. Unity without diversity becomes a bubble.
 
-But in Christ, God does something supernatural: He makes strangers into family.
+But In Christ, God does something supernatural: He makes strangers into family.
 
 > "For He Himself is our peace... to create in Himself one new man from the two..." (Ephesians 2:14–15, NKJV)
 

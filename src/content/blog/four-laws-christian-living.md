@@ -31,14 +31,14 @@ Before making decisions, ask: *What would love do here?* Love for God, love for 
 
 > "For the law of the Spirit of life in Christ Jesus has made me free from the law of sin and death." (Romans 8:2, NKJV)
 
-This law declares that when you're in Christ, you're governed by life, not death. The Spirit of Life has overcome every force that would bring you down, hold you back, or steal your future.
+This law declares that when you're In Christ, you're governed by life, not death. The Spirit of Life has overcome every force that would bring you down, hold you back, or steal your future.
 
 This law operates when we:
 
 - walk in fellowship with the Holy Spirit
 - renew our minds with God's Word
 - refuse to be governed by fear or condemnation
-- live from our new identity in Christ
+- live from our new identity In Christ
 
 Instead of struggling against sin and limitation, you begin to experience the life of God flowing through you naturally.
 

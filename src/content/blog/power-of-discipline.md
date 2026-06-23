@@ -10,7 +10,7 @@ tags: ["discipline", "spiritual-growth", "christian-living", "fruit-of-spirit"]
 
 This statement captures the essence of discipline in our Christian walk. Far from being a set of rules or a rigid regimen, discipline is a vital expression of the divine nature we possess as believers. It's the force that restrains the inclinations of our flesh and guides us toward living a life fully aligned with God's will.
 
-## Discipline Is Part of Who You Are in Christ
+## Discipline Is Part of Who You Are In Christ
 
 Consider Michael Phelps — the most decorated Olympian in history. His remarkable achievements were not only the result of extraordinary talent but of relentless discipline. Consistent, intentional, and deliberate — that discipline transformed his potential into reality.
 
@@ -18,7 +18,7 @@ The fruit of the Spirit, including discipline, is not merely a behavior to adopt
 
 > "His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness. Through these he has given us his very great and precious promises, so that through them you may participate in the divine nature..." (2 Peter 1:3–4, NIV)
 
-Discipline is inherently part of who we are in Christ. It's a manifestation of God's transformative power within us — freeing us from distractions and leading us toward a life of purpose.
+Discipline is inherently part of who we are In Christ. It's a manifestation of God's transformative power within us — freeing us from distractions and leading us toward a life of purpose.
 
 As Ryan Holiday writes in *Discipline is Destiny*: "Discipline is not a restriction but a liberation. It frees us from the chaos of unchecked desires and directs us toward the fulfillment of our higher purpose."
 

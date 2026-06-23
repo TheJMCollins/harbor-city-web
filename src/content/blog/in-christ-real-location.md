@@ -22,7 +22,7 @@ The Bible presents two fundamental positions for humanity:
 
 **In Christ:** the redeemed human condition. Born again by the Spirit, united with Christ in His death and resurrection, positioned in the heavenly realm, under grace.
 
-You were born *in Adam*. When you came to faith, you were transferred *in Christ*.
+You were born *in Adam*. When you came to faith, you were transferred *In Christ*.
 
 That transfer is total. It is not partial, not provisional, not conditional on your performance.
 
@@ -42,17 +42,17 @@ No condemnation. Not less condemnation. Not condemnation for the big things but 
 
 *No condemnation.*
 
-Because you are no longer standing in Adam's record. You are standing in Christ's record.
+Because you are no longer standing in Adam's record. You are standing In Christ's record.
 
 > "...and raised us up together, and made us sit together in the heavenly places in Christ Jesus." (Ephesians 2:6, NKJV)
 
-Right now—while you're reading this—your spiritual position is seated in heavenly places. Not on your way there. Already there, in Christ.
+Right now—while you're reading this—your spiritual position is seated in heavenly places. Not on your way there. Already there, In Christ.
 
 Your circumstances are in one location. Your identity is in another.
 
 > "...that the sharing of your faith may become effective by the acknowledgment of every good thing which is in you in Christ Jesus." (Philemon 1:6, NKJV)
 
-Faith becomes effective when you acknowledge what is already in you in Christ. Not what you're trying to achieve. What is already true.
+Faith becomes effective when you acknowledge what is already in you In Christ. Not what you're trying to achieve. What is already true.
 
 ## Abiding: Staying Where You Are
 
@@ -64,7 +64,7 @@ Abiding means remaining. Choosing—moment by moment, decision by decision—to 
 
 A branch doesn't produce fruit by trying harder. It produces fruit by staying attached.
 
-When we drift from that connection—through sin, distraction, unbelief, or neglect—we don't lose our position *in Christ*, but we lose the conscious, vital experience of it. We live below what's already true about us.
+When we drift from that connection—through sin, distraction, unbelief, or neglect—we don't lose our position *In Christ*, but we lose the conscious, vital experience of it. We live below what's already true about us.
 
 Abiding is how we close that gap.
 
