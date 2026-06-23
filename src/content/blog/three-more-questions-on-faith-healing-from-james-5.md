@@ -20,7 +20,7 @@ In times of hardship—tests and trials—our first response should be prayer. P
 
 ### Responding to Sickness
 
-When facing illness, James instructs us to seek prayer from the church elders. Not just any prayer, but the Prayer of Faith. This is the type of prayer Jesus mentions in Mark 11:23, where he tells us to believe that we receive when we pray. The Prayer of Faith and the anointing with oil symbolizes the Holy Spirit's presence and the setting apart of the sick person for God's special attention and healing.
+When facing illness, James instructs us to seek prayer from the church elders. Not just any prayer, but the Prayer of Faith. This is the type of prayer Jesus mentions in Mark 11:23, where He tells us to believe that we receive when we pray. The Prayer of Faith and the anointing with oil symbolizes the Holy Spirit's presence and the setting apart of the sick person for God's special attention and healing.
 
 ## 2. What Is the Role of Faith in Healing?
 

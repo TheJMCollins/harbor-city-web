@@ -14,13 +14,13 @@ The Bible offers numerous stories about the healing power of faith. Perhaps one 
 
 ## A Testament to Jesus' Healing Power
 
-Mark 3:4–6 tells the story of Jesus encountering a man with a withered hand while teaching in a synagogue. The Pharisees, ever watchful for any opportunity to criticize Jesus, observed him closely to see if he would heal the man on the Sabbath, a day traditionally seen as one of rest.
+Mark 3:4–6 tells the story of Jesus encountering a man with a withered hand while teaching in a synagogue. The Pharisees, ever watchful for any opportunity to criticize Jesus, observed Him closely to see if He would heal the man on the Sabbath, a day traditionally seen as one of rest.
 
 Jesus, however, challenged their rigid interpretation of the law, asking, "Is it lawful on the Sabbath to do good or to do harm, to save life or to kill?" (Mark 3:4). Faced with this question, the Pharisees remained silent.
 
 Filled with both anger at their hardness of heart and compassion for the suffering man, Jesus commanded the man to "Stretch out your hand" (Mark 3:5). The man obeyed, and his hand was miraculously restored.
 
-This story exemplifies not only Jesus' power to heal but also his deep love and willingness to heal those in need. It serves as a powerful lesson that faith in Jesus is the pathway to healing in our lives.
+This story exemplifies not only Jesus' power to heal but also His deep love and willingness to heal those in need. It serves as a powerful lesson that faith in Jesus is the pathway to healing in our lives.
 
 ## Additional Stories of Healing in the Bible
 
