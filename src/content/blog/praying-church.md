@@ -36,7 +36,7 @@ Twenty-one days. Intentional. Unified.
 
 Why January? Because we believe the new year deserves to be consecrated—not just planned, but prayed.
 
-Why August? Because we believe a new ministry season deserves to be launched in the Spirit, not just in strategy.
+Why August? Because we believe a new ministry season deserves to be launched in The Spirit, not just in strategy.
 
 What happens during 21 Days of Prayer:
 
@@ -57,7 +57,7 @@ We gather. We pray. We believe.
 
 Before services. After services. In small circles and in large ones. Over people who are struggling and over people who are about to step into something new.
 
-We believe in laying hands on people. We believe in agreeing together. We believe that the Holy Spirit moves when believers gather in His name and ask.
+We believe in laying hands on people. We believe in agreeing together. We believe that The Holy Spirit moves when believers gather in His name and ask.
 
 ## Prayer Academy
 
@@ -103,7 +103,7 @@ It's the inheritance of every believer.
 
 If you're new to prayer, start simple. A few minutes in the morning. A conversation with God before you sleep. Talk to Him like He's actually there—because He is.
 
-If you've been praying for years, go deeper. Ask God to show you how to intercede for others, for your city, for the Kingdom.
+If you've been praying for years, go deeper. Ask God to show you how to intercede for others, for your city, for The Kingdom.
 
 And if you're in a season where prayer feels dry or hard—come anyway. Show up. Lean into the community. Let others carry you until you can run again.
 
@@ -117,4 +117,4 @@ Its prayer life.
 
 We want to be a church so given to prayer that when people walk through our doors, they feel the weight of God's presence before anyone says a word.
 
-We are a praying church—because we believe everything we need is found in Him, and prayer is how we find it.
+We are a praying church—because we believe everything we need is found In Him, and prayer is how we find it.

@@ -1,6 +1,6 @@
 ---
-title: "The Power of Discipline: Cultivating the Fruits of the Spirit"
-description: "Discipline is not a restriction — it's a liberation. As one of the fruits of the Spirit, it frees us from the chaos of unchecked desires and empowers us to take the steps of faith that transform our lives."
+title: "The Power of Discipline: Cultivating the Fruits of The Spirit"
+description: "Discipline is not a restriction — it's a liberation. As one of the fruits of The Spirit, it frees us from the chaos of unchecked desires and empowers us to take the steps of faith that transform our lives."
 pubDate: 2024-08-19
 author: "Harbor City Church"
 tags: ["discipline", "spiritual-growth", "christian-living", "fruit-of-spirit"]
@@ -14,7 +14,7 @@ This statement captures the essence of discipline in our Christian walk. Far fro
 
 Consider Michael Phelps — the most decorated Olympian in history. His remarkable achievements were not only the result of extraordinary talent but of relentless discipline. Consistent, intentional, and deliberate — that discipline transformed his potential into reality.
 
-The fruit of the Spirit, including discipline, is not merely a behavior to adopt. It's a reflection of the divine nature we receive through our union with Christ.
+The fruit of The Spirit, including discipline, is not merely a behavior to adopt. It's a reflection of the divine nature we receive through our union with Christ.
 
 > "His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness. Through these he has given us his very great and precious promises, so that through them you may participate in the divine nature..." (2 Peter 1:3–4, NIV)
 
@@ -43,7 +43,7 @@ Just as we choose to love and find joy despite our circumstances, we choose disc
 1. **The Discipline of Bible Reading** — engaging with Scripture daily, growing in knowledge and wisdom, grounded in God's Word
 2. **The Discipline of Prayer** — regular prayer that fosters closeness with God and opens the door for His intervention
 3. **The Discipline of Gathering** — communal worship and fellowship that strengthens faith and builds real community
-4. **The Discipline of Giving** — generosity and stewardship that align our priorities with God's kingdom
+4. **The Discipline of Giving** — generosity and stewardship that align our priorities with God's Kingdom
 5. **The Discipline of Service** — serving others as an act of love and obedience, living out Christ's teachings in practical ways
 
 ## Practical Ways to Embrace Discipline

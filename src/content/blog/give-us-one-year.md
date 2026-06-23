@@ -1,6 +1,6 @@
 ---
 title: "Give Us One Year"
-description: "We have a simple challenge for anyone serious about starting. Come out to the church and give us one year of your life — one year of hearing the Word, speaking it, and doing it."
+description: "We have a simple challenge for anyone serious about starting. Come out to the church and give us one year of your life — one year of hearing The Word, speaking it, and doing it."
 pubDate: 2026-04-13
 author: "Pastor Michael Collins"
 tags: ["discipleship", "invitation"]
@@ -10,7 +10,7 @@ We have a simple challenge for anyone who is serious about starting.
 
 Come out to the church. Give us one year of your life.
 
-One year in which you hear the Word. One year in which you speak the Word. One year in which you do the Word of God.
+One year in which you hear The Word. One year in which you speak The Word. One year in which you do The Word of God.
 
 And we guarantee your life will never be the same again.
 
@@ -36,7 +36,7 @@ The year goes. Life goes. The question isn't whether twelve months will pass —
 
 I have watched people come into this church carrying things that had followed them for decades. Anger. Grief. Shame they couldn't see past. Marriages held together by habit and not much else. I have watched those same people, a year later, look different. Carry themselves differently. Speak about their families differently.
 
-Not because we did something to them. Because they gave the Word a year to work.
+Not because we did something to them. Because they gave The Word a year to work.
 
 ---
 

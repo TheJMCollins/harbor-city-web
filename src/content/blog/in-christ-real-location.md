@@ -20,7 +20,7 @@ The Bible presents two fundamental positions for humanity:
 
 **In Adam:** the default human condition. Born into sin, subject to death, separated from God, living under the dominion of the flesh.
 
-**In Christ:** the redeemed human condition. Born again by the Spirit, united with Christ in His death and resurrection, positioned in the heavenly realm, under grace.
+**In Christ:** the redeemed human condition. Born again by The Spirit, united with Christ in His death and resurrection, positioned in the heavenly realm, under grace.
 
 You were born *in Adam*. When you came to faith, you were transferred *In Christ*.
 
@@ -96,9 +96,9 @@ You don't pray to get God's attention. You pray from a place of intimacy that is
 
 You don't serve to earn God's favor. You serve from the overflow of favor already given.
 
-You don't read the Bible hoping God will like you better. You read it to see more clearly who you already are.
+You don't read The Bible hoping God will like you better. You read it to see more clearly who you already are.
 
-Everything shifts when you understand that you are not on your way to Christ—you are in Him.
+Everything shifts when you understand that you are not on your way to Christ—you are In Him.
 
 ## A Final Thought
 

@@ -68,7 +68,7 @@ That's what the early church did when it preached resurrection in a city that ha
 
 ## What Poisons Faith
 
-The fruit of the Spirit includes love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control.
+The fruit of The Spirit includes love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control.
 
 But notice: the flesh produces their opposites. And those opposites—anxiety, bitterness, fear, unbelief, offense, despair—don't just affect our emotions. They contaminate our faith.
 
@@ -76,7 +76,7 @@ You can't carry unforgiveness and walk in faith at the same time. They work agai
 
 You can't carry chronic anxiety about tomorrow and believe God's provision for tomorrow is already secured.
 
-This is why spiritual disciplines aren't just about personal holiness—they guard the atmosphere of faith. A heart saturated with the Word, guarded through prayer, and kept soft through community is a heart that can sustain the spirit of faith under pressure.
+This is why spiritual disciplines aren't just about personal holiness—they guard the atmosphere of faith. A heart saturated with The Word, guarded through prayer, and kept soft through community is a heart that can sustain the spirit of faith under pressure.
 
 ## God Always Follows Through
 
@@ -92,7 +92,7 @@ It rests on the character of a God who has never started something He didn't fin
 
 ## How to Develop the Fighting Spirit
 
-**Feed your faith.** Faith comes by hearing the Word of God (Romans 10:17). A faith that isn't fed will starve.
+**Feed your faith.** Faith comes by hearing The Word of God (Romans 10:17). A faith that isn't fed will starve.
 
 **Speak what you believe.** "I believed and therefore I spoke." Faith has a voice. What are you saying about your situation?
 

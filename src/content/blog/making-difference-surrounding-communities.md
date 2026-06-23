@@ -1,6 +1,6 @@
 ---
 title: "Making a Difference in Our Communities"
-description: "We don't just go to church in the city—we serve the city. Community impact isn't a side ministry; it's part of what it means to follow Jesus and live out the Gospel in practical form."
+description: "We don't just go to church in the city—we serve the city. Community impact isn't a side ministry; it's part of what it means to follow Jesus and live out The Gospel in practical form."
 pubDate: 2024-09-30
 author: "Harbor City Church"
 tags: ["community-impact", "outreach", "service", "baltimore", "kingdom-living"]
@@ -10,7 +10,7 @@ We are a church that makes a difference in our surrounding communities.
 
 We don't just go to church in the city—we serve the city.
 
-It's possible to love good preaching, enjoy great worship, and still miss the point if the Gospel never leaves the building.
+It's possible to love good preaching, enjoy great worship, and still miss the point if The Gospel never leaves the building.
 
 Jesus never intended the Church to be a weekly event people attend. He intended it to be a living presence people feel—right where pain lives, where needs are real, and where hope is in short supply.
 
@@ -24,7 +24,7 @@ A lot of people treat "helping the community" like a side ministry—nice if you
 
 But biblically, community impact is part of what it means to follow Jesus.
 
-Because the Gospel isn't only a message you believe. It's a life you live.
+Because The Gospel isn't only a message you believe. It's a life you live.
 
 > "For we are His workmanship, created in Christ Jesus for good works..." (Ephesians 2:10, NKJV)
 

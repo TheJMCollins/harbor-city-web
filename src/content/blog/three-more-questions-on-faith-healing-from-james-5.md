@@ -20,7 +20,7 @@ In times of hardship—tests and trials—our first response should be prayer. P
 
 ### Responding to Sickness
 
-When facing illness, James instructs us to seek prayer from the church elders. Not just any prayer, but the Prayer of Faith. This is the type of prayer Jesus mentions in Mark 11:23, where He tells us to believe that we receive when we pray. The Prayer of Faith and the anointing with oil symbolizes the Holy Spirit's presence and the setting apart of the sick person for God's special attention and healing.
+When facing illness, James instructs us to seek prayer from the church elders. Not just any prayer, but the Prayer of Faith. This is the type of prayer Jesus mentions in Mark 11:23, where He tells us to believe that we receive when we pray. The Prayer of Faith and the anointing with oil symbolizes The Holy Spirit's presence and the setting apart of the sick person for God's special attention and healing.
 
 ## 2. What Is the Role of Faith in Healing?
 
@@ -46,7 +46,7 @@ James 5:16 highlights the importance of mutual confession and prayer within the 
 
 Confessing our sins to one another fosters transparency, accountability, and support within the faith community. It builds a strong spiritual bond, encouraging members to uphold each other in prayer. This mutual support system enhances the healing process, as collective prayer is powerful and effective.
 
-Confession goes one step further—it cleanses. In 1 John 1:9 the apostle tells us, "But if we confess our sins to him, he is faithful and just to forgive us our sins and to cleanse us from all wickedness." This activates the principle that if there is no sin, then there can be no sickness, and that is why the prayer of a righteous person works so well. With sin removed through the cleansing of the Blood of Jesus, there is no longer anything standing between you and God.
+Confession goes one step further—it cleanses. In 1 John 1:9 the apostle tells us, "But if we confess our sins to him, he is faithful and just to forgive us our sins and to cleanse us from all wickedness." This activates the principle that if there is no sin, then there can be no sickness, and that is why the prayer of a righteous person works so well. With sin removed through the cleansing of The Blood of Jesus, there is no longer anything standing between you and God.
 
 ### The Example of Elijah
 

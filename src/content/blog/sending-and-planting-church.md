@@ -6,7 +6,7 @@ author: "Harbor City Church"
 tags: ["church-planting", "sending", "leadership-development", "mission"]
 ---
 
-We are a church that sends and plants—because the Gospel was never meant to stay in one building or one zip code. We don't just attend church; we launch the Church. We raise up disciples, develop leaders, and release people into their calling—locally and globally—so more communities can experience a life-giving, Word-and-Spirit expression of Jesus.
+We are a church that sends and plants—because The Gospel was never meant to stay in one building or one zip code. We don't just attend church; we launch the Church. We raise up disciples, develop leaders, and release people into their calling—locally and globally—so more communities can experience a life-giving, Word-and-Spirit expression of Jesus.
 
 If you've ever watched a rocket launch, you know the goal isn't to admire the rocket on the launchpad. The goal is liftoff. Movement. Mission. Destination.
 
@@ -18,7 +18,7 @@ Not a church that clutches resources like they're rare collectibles.
 
 Not a church that treats "calling" like an exclusive members-only perk.
 
-We're a church that believes the Gospel was made to travel.
+We're a church that believes The Gospel was made to travel.
 
 Jesus said it plainly:
 
@@ -51,7 +51,7 @@ But every believer is sent somewhere.
 
 Church planting is spiritual multiplication.
 
-It's not just "starting services." It's establishing new communities of faith where people meet Jesus, grow strong, get free, discover purpose, and learn to live in the power of the Holy Spirit.
+It's not just "starting services." It's establishing new communities of faith where people meet Jesus, grow strong, get free, discover purpose, and learn to live in the power of The Holy Spirit.
 
 A healthy church doesn't only grow larger—it grows wider.
 
@@ -88,7 +88,7 @@ They help us:
 
 You don't have to be "the church planter type" to be part of church planting.
 
-In the Bible, sending always looked like a team effort. Here are a few ways you can participate right now:
+In The Bible, sending always looked like a team effort. Here are a few ways you can participate right now:
 
 ### Pray like a sender
 

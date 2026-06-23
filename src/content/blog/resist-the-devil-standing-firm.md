@@ -23,12 +23,12 @@ The enemy fights with lies. We fight back with Scripture. These are not just ver
 - **1 Corinthians 2:16** — I have understanding because I have the mind of Christ.
 - **2 Timothy 1:7** — God has not given me a spirit of fear and timidity, but of power, love, and self-discipline.
 - **Jeremiah 29:11** — God has good plans for me, to give me a future and a hope.
-- **Psalm 118:17** — I will not die; instead I will live to tell what the Lord has done.
+- **Psalm 118:17** — I will not die; instead I will live to tell what The Lord has done.
 - **Psalm 91:10** — No evil will conquer me; no plague will come near my home.
 - **Psalm 34:17** — The Lord hears me when I call to Him for help. He rescues me from all my troubles.
 - **Isaiah 43:18–19** — God is doing something new. He is making a pathway through the wilderness and rivers in the dry wasteland.
 
-Every time the enemy brings an accusation, you have an answer. You don't argue with the devil—you speak the Word.
+Every time the enemy brings an accusation, you have an answer. You don't argue with the devil—you speak The Word.
 
 ## What Happens When We Resist?
 
@@ -36,7 +36,7 @@ James 4:7 is one of the most direct commands in Scripture: *resist the devil, an
 
 But here's what we need to understand: resistance is not passive. Resistance is active, vocal, and deliberate.
 
-When doubt comes, speak to it: *"Doubt, I resist you. I refuse to doubt in the name of the Lord Jesus Christ."*
+When doubt comes, speak to it: *"Doubt, I resist you. I refuse to doubt in the name of The Lord Jesus Christ."*
 
 When fear comes, speak to it: *"Fear, I resist you. I refuse to fear."*
 
@@ -69,7 +69,7 @@ Don't receive what the enemy puts on you. Don't accept symptoms, fear, doubt, or
 ## Reflection Questions
 
 - When doubt or fear comes, what is your first response? Do you accept it, or do you resist it?
-- Which of the Scripture confessions above speaks most directly to something you're facing right now?
+- Which of The Scripture confessions above speaks most directly to something you're facing right now?
 - What would it look like to practice active, vocal resistance this week?
 
 ---

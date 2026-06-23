@@ -32,7 +32,7 @@ Two years later, their marriage was whole. They were leading a small group. They
 
 They didn't plan any of that. They just kept showing up.
 
-That is the whole testimony. That is how transformation works — not in a single dramatic moment, but in the accumulated weight of weeks. In the ordinary faithfulness of sitting in the same room with the Word, with community, with the presence of God.
+That is the whole testimony. That is how transformation works — not in a single dramatic moment, but in the accumulated weight of weeks. In the ordinary faithfulness of sitting in the same room with The Word, with community, with the presence of God.
 
 ## When you don't feel like it
 

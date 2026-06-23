@@ -26,7 +26,7 @@ If you want to see God's dream for the Church, look at heaven:
 
 Heaven is not monochrome. And the closer a church looks like heaven, the more it reflects the heart of God.
 
-The local church is meant to be a preview—an outpost of the Kingdom—where unity is not uniformity, and love is stronger than background.
+The local church is meant to be a preview—an outpost of The Kingdom—where unity is not uniformity, and love is stronger than background.
 
 ## What Makes This Possible: One New Family
 
@@ -47,7 +47,7 @@ That doesn't mean we erase culture, history, or differences. It means we place t
 
 Our world is increasingly age-segregated—everybody in their own lane.
 
-But the Bible's pattern is spiritual family: spiritual mothers, fathers, sons, and daughters learning together.
+But The Bible's pattern is spiritual family: spiritual mothers, fathers, sons, and daughters learning together.
 
 > "I have no greater joy than to hear that my children walk in truth." (3 John 1:4, NKJV)
 
@@ -75,7 +75,7 @@ At Harbor City:
 - status doesn't make you spiritual
 - struggle doesn't make you "less than"
 
-The ground is level at the foot of the cross.
+The ground is level at the foot of The Cross.
 
 ## The Practical Result: A Church That Feels Like Family
 
@@ -85,7 +85,7 @@ People stop being stereotypes and start being friends.
 
 You hear stories that expand your worldview. You worship beside people who've survived what you've only read about. You learn from believers who have walked with God for decades. You gain empathy, humility, and strength.
 
-And you realize the Kingdom is bigger than your preferences.
+And you realize The Kingdom is bigger than your preferences.
 
 ## How You Can Protect This Culture
 
@@ -109,4 +109,4 @@ So when you walk into Harbor City, our prayer is that you don't just find a serv
 
 You find a family you didn't know you needed.
 
-We are a church that is cross-cultural, multi-generational, and economically diverse—because that's what the Kingdom looks like.
+We are a church that is cross-cultural, multi-generational, and economically diverse—because that's what The Kingdom looks like.

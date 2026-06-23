@@ -1,6 +1,6 @@
 ---
 title: "Radically Generous"
-description: "Generosity isn't a fundraising strategy at Harbor City—it's a Kingdom value. We give because God gave first, and radical generosity is how the Kingdom moves."
+description: "Generosity isn't a fundraising strategy at Harbor City—it's a Kingdom value. We give because God gave first, and radical generosity is how The Kingdom moves."
 pubDate: 2024-10-28
 author: "Harbor City Church"
 tags: ["generosity", "giving", "kingdom-values", "stewardship", "faith"]
@@ -80,7 +80,7 @@ We want cheerful givers—people who have caught the vision, who trust God's fai
 
 When we give, we're not just paying bills. We're investing in:
 
-- people who are hearing the Gospel for the first time
+- people who are hearing The Gospel for the first time
 - families who are getting healthy
 - students who are learning God's Word
 - community initiatives that demonstrate the love of Christ

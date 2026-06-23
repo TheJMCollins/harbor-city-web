@@ -1,6 +1,6 @@
 ---
 title: "We Turn Followers Into Leaders"
-description: "Jesus didn't just call people to follow Him—He formed them to lead. At Harbor City, we're committed to building a culture of servant-leadership that turns disciples into contributors and multiplies the Kingdom."
+description: "Jesus didn't just call people to follow Him—He formed them to lead. At Harbor City, we're committed to building a culture of servant-leadership that turns disciples into contributors and multiplies The Kingdom."
 pubDate: 2024-09-23
 author: "Harbor City Church"
 tags: ["leadership-development", "discipleship", "servant-leadership", "calling"]
@@ -52,7 +52,7 @@ Kingdom leadership doesn't start with a platform. It starts with a towel.
 
 This is a big part of our vision—not just building a crowd, but building a culture.
 
-**1) We train people in the Word and the Spirit**
+**1) We train people in The Word and The Spirit**
 
 Confidence comes from clarity, and clarity comes from truth. A leader who isn't rooted will always drift.
 

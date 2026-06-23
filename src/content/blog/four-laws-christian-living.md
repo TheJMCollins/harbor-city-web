@@ -14,7 +14,7 @@ At Harbor City Church, we teach what we call the Four Laws that govern Christian
 
 > "For in Christ Jesus neither circumcision nor uncircumcision avails anything, but faith working through love." (Galatians 5:6, NKJV)
 
-Love isn't just a nice sentiment — it's the supreme law that governs all spiritual activity. Paul calls it the "Royal Law" because love is the governing principle of God's kingdom.
+Love isn't just a nice sentiment — it's the supreme law that governs all spiritual activity. Paul calls it the "Royal Law" because love is the governing principle of God's Kingdom.
 
 Here's what's revolutionary about this law: faith works through love, not through effort.
 
@@ -27,7 +27,7 @@ When we operate in love:
 
 Before making decisions, ask: *What would love do here?* Love for God, love for others, love for the truth. This law guides everything else.
 
-## The Law of the Spirit of Life (Romans 8:2)
+## The Law of The Spirit of Life (Romans 8:2)
 
 > "For the law of the Spirit of life in Christ Jesus has made me free from the law of sin and death." (Romans 8:2, NKJV)
 
@@ -35,7 +35,7 @@ This law declares that when you're In Christ, you're governed by life, not death
 
 This law operates when we:
 
-- walk in fellowship with the Holy Spirit
+- walk in fellowship with The Holy Spirit
 - renew our minds with God's Word
 - refuse to be governed by fear or condemnation
 - live from our new identity In Christ
@@ -97,7 +97,7 @@ When we align our lives with these divine principles, we begin to experience pea
 Which of these four laws do you need to focus on this week?
 
 - Are you letting love govern your decisions?
-- Are you walking in the Spirit of Life or still struggling with old patterns?
+- Are you walking in The Spirit of Life or still struggling with old patterns?
 - Is your faith connected to God's Word and promises?
 - Are you sowing seeds that will create the future you want?
 

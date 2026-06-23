@@ -64,7 +64,7 @@ That's more common than you think—especially for mature, educated professional
 
 Here's the good news: you don't discover gifts only by thinking—you discover gifts by trying.
 
-A lot of people want a "spiritual personality test" before they'll serve. But the Kingdom doesn't work like a career placement office. It works like apprenticeship.
+A lot of people want a "spiritual personality test" before they'll serve. But The Kingdom doesn't work like a career placement office. It works like apprenticeship.
 
 You learn by getting around the mission, by stepping into opportunities, and by noticing what God consistently breathes on.
 

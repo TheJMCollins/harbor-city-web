@@ -14,7 +14,7 @@ Most people don't struggle with having any dream. They struggle with having a dr
 
 And if we're honest, the easiest way to avoid disappointment is to keep expectations small.
 
-But the Kingdom doesn't move through caution. It moves through faith.
+But The Kingdom doesn't move through caution. It moves through faith.
 
 > "Now to Him who is able to do exceedingly abundantly above all that we ask or think..." (Ephesians 3:20, NKJV)
 
@@ -107,4 +107,4 @@ So we refuse to be a church that only preserves the past.
 
 We will be a church that believes for the future—tuition-free Christian schools in Baltimore, strong families through The Life Center, and a city impacted by the life and leadership of Jesus.
 
-We are a church that dares to dream God's dream—because God still does "exceedingly abundantly," and faith is still the language of the Kingdom.
+We are a church that dares to dream God's dream—because God still does "exceedingly abundantly," and faith is still the language of The Kingdom.

@@ -6,7 +6,7 @@ author: "Harbor City Church"
 tags: ["life-giving", "grace-and-truth", "holy-spirit", "church-culture", "healing"]
 ---
 
-We are a church that is life-giving—because church should feel like oxygen, not obligation. We're not here to pile on religious pressure; we're here to help people encounter Jesus, grow in the Word, experience the Holy Spirit, and step into the abundant life He promised. When grace and truth meet real people, dead things live again.
+We are a church that is life-giving—because church should feel like oxygen, not obligation. We're not here to pile on religious pressure; we're here to help people encounter Jesus, grow in The Word, experience The Holy Spirit, and step into the abundant life He promised. When grace and truth meet real people, dead things live again.
 
 A lot of people grew up thinking church was mainly about rules: what you can't do, what you shouldn't do, what you'd better not do—unless you want God to get you.
 
@@ -56,7 +56,7 @@ We don't believe Christianity is just improved behavior. We believe it's new lif
 
 Life-giving church isn't a self-help seminar with a Bible verse taped on it.
 
-It's a Spirit-filled community where the Word renews your mind, the Spirit strengthens your heart, faith rises again, and shame loses its grip.
+It's a Spirit-filled community where The Word renews your mind, The Spirit strengthens your heart, faith rises again, and shame loses its grip.
 
 ## What Life-Giving Looks Like in Real Life
 
@@ -64,7 +64,7 @@ Life-giving doesn't mean you never face problems. It means you don't face them a
 
 ### 1) You encounter God, not just information
 
-We want you to know what the Bible says—but more than that, we want you to know the God who speaks through it.
+We want you to know what The Bible says—but more than that, we want you to know the God who speaks through it.
 
 ### 2) You find freedom, not just inspiration
 
