@@ -37,6 +37,7 @@ h6 {
   font-family: var(--font-display);
   font-weight: 300;
   line-height: var(--leading-snug);
+  text-wrap: balance;
   color: var(--color-text);
 }
 
