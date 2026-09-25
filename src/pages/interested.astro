@@ -1,0 +1,296 @@
+---
+/**
+ * Harbor City Church — "I'm interested in the future" sign-up.
+ *
+ * Linked from the farewell homepage (Stay tuned) and the closing CTAs on
+ * Our Story and the Blog. Submissions post to a Google Apps Script web app
+ * that appends a row to the "Harbor City – Interested in the Future
+ * (Sign-ups)" Google Sheet in Julius's Drive.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionLabel from '../components/global/SectionLabel.astro';
+
+const ENDPOINT =
+  'https://script.google.com/macros/s/AKfycbySiSq_w8LvvSPNCQClXv5Ao8auACstwxcAcgNdfAcgLNG5dAgqWdlV4DZHM3nBroCJbw/exec';
+---
+
+<BaseLayout
+  title="Stay Connected | Harbor City Church"
+  description="Something new is on the horizon. Leave your name and we'll keep you informed."
+  brand="main"
+>
+  <section class="int-hero">
+    <div class="int-bg"></div>
+    <div class="int-content">
+      <p class="int-label">Something new is on the horizon</p>
+      <h1>I'm interested in <em>the future.</em></h1>
+      <p class="int-sub">
+        Leave your name and how to reach you, and we'll let you know what God
+        is doing next.
+      </p>
+    </div>
+  </section>
+
+  <section class="section int-form-wrap">
+    <div class="container-narrow">
+      <form id="interest-form" class="int-form" data-endpoint={ENDPOINT} novalidate>
+        <SectionLabel>Stay connected</SectionLabel>
+
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+
+        <label class="field">
+          <span>Phone</span>
+          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" />
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" />
+        </label>
+
+        <!-- honeypot: hidden from people, bots fill it -->
+        <label class="hp" aria-hidden="true">
+          Website <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="consent" value="yes" />
+          <span>
+            Keep me informed by text and email.
+            <small>Msg &amp; data rates may apply. Reply STOP to opt out.</small>
+          </span>
+        </label>
+
+        <p class="int-error" role="alert" hidden></p>
+
+        <button type="submit" class="int-submit">Count me in</button>
+      </form>
+
+      <div id="interest-thanks" class="int-thanks" hidden tabindex="-1">
+        <h2>Thank you.</h2>
+        <p>We've got your name. We'll be in touch when there's news to share.</p>
+        <a href="/" class="int-home">Back to home</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('interest-form') as HTMLFormElement | null;
+  const thanks = document.getElementById('interest-thanks');
+  if (form && thanks) {
+    const err = form.querySelector<HTMLElement>('.int-error')!;
+    const btn = form.querySelector<HTMLButtonElement>('.int-submit')!;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = String(data.get('name') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      const phone = String(data.get('phone') || '').trim();
+      let msg = '';
+      if (!name) msg = 'Please enter your name.';
+      else if (!email && !phone) msg = 'Please enter a phone number or email.';
+      else if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) msg = 'Please check your email address.';
+      if (msg) {
+        err.textContent = msg;
+        err.hidden = false;
+        return;
+      }
+      err.hidden = true;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      const body = new URLSearchParams();
+      data.forEach((v, k) => body.append(k, String(v)));
+      if (!data.get('consent')) body.append('consent', 'no');
+      body.append('source', document.referrer ? new URL(document.referrer).pathname : 'direct');
+      try {
+        await fetch(form.dataset.endpoint!, { method: 'POST', mode: 'no-cors', body });
+        form.hidden = true;
+        thanks.hidden = false;
+        thanks.focus();
+      } catch {
+        err.textContent = 'Something went wrong. Please try again in a moment.';
+        err.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Count me in';
+      }
+    });
+  }
+</script>
+
+<style>
+  .int-hero {
+    position: relative;
+    min-height: 56vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 140px 0 80px;
+  }
+  .int-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--hero-gradient);
+  }
+  .int-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    padding: 0 24px;
+  }
+  .int-label {
+    font-family: var(--hcc-font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 28px;
+  }
+  .int-hero h1 {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(40px, 6.5vw, 84px);
+    font-weight: 300;
+    color: var(--hcc-white);
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+  .int-hero h1 em {
+    font-style: italic;
+    color: var(--hcc-gold-light);
+  }
+  .int-sub {
+    font-family: var(--hcc-font-sans);
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .int-form-wrap {
+    background: var(--hcc-cream);
+  }
+  .int-form,
+  .int-thanks {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .int-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .field span {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--hcc-text-light);
+  }
+  .field input {
+    font-family: var(--hcc-font-sans);
+    font-size: 17px;
+    padding: 14px 16px;
+    border: 1px solid rgba(42, 37, 32, 0.2);
+    background: var(--hcc-white);
+    color: var(--hcc-text);
+    border-radius: 2px;
+    width: 100%;
+  }
+  .field input:focus {
+    outline: 2px solid var(--hcc-gold);
+    outline-offset: 1px;
+  }
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .check {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-family: var(--hcc-font-sans);
+    font-size: 16px;
+    color: var(--hcc-text);
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .check input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: var(--hcc-midnight);
+    flex-shrink: 0;
+  }
+  .check small {
+    display: block;
+    font-size: 12px;
+    color: var(--hcc-text-meta);
+    margin-top: 4px;
+  }
+  .int-error {
+    font-family: var(--hcc-font-sans);
+    font-size: 15px;
+    color: #9b2c2c;
+  }
+  .int-submit,
+  .int-home {
+    align-self: flex-start;
+    font-family: var(--hcc-font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hcc-white);
+    background: var(--hcc-midnight);
+    border: 1px solid var(--hcc-midnight);
+    padding: 16px 32px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
+  }
+  .int-submit:hover,
+  .int-home:hover {
+    background: transparent;
+    color: var(--hcc-midnight);
+  }
+  .int-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+  .int-thanks {
+    text-align: center;
+  }
+  .int-thanks h2 {
+    font-family: var(--hcc-font-display);
+    font-weight: 400;
+    font-size: var(--text-3xl);
+    color: var(--hcc-text);
+  }
+  .int-thanks p {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-lg);
+    font-weight: 300;
+    color: var(--hcc-text-light);
+    margin: 16px 0 32px;
+  }
+  .int-thanks .int-home {
+    align-self: center;
+  }
+</style>
