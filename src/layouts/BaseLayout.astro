@@ -94,7 +94,7 @@ const bodyBrand = brand === 'main' ? undefined : brand;
             }
           });
         },
-        { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+        { threshold: 0, rootMargin: '0px 0px -60px 0px' } // threshold 0 so very tall blocks (e.g. the blog list on phones) still reveal
       );
 
       document
