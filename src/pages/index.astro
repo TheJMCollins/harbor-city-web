@@ -32,7 +32,7 @@ import SectionLabel from '../components/global/SectionLabel.astro';
       </p>
       <div class="stay">
         <p class="stay-note">Something new is on the horizon.</p>
-        <span class="stay-pill">Stay tuned</span>
+        <a href="/interested" class="stay-pill">Stay tuned</a>
       </div>
     </div>
   </section>
@@ -184,6 +184,13 @@ import SectionLabel from '../components/global/SectionLabel.astro';
     border: 1px solid rgba(200, 169, 110, 0.5);
     border-radius: var(--radius-full);
     padding: 8px 20px;
+    text-decoration: none;
+    transition: background var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
+  }
+
+  .stay-pill:hover {
+    background: var(--hcc-gold);
+    color: var(--hcc-midnight);
   }
 
   /* ---- The site remains ---- */
