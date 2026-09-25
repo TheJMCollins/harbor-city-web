@@ -1,70 +1,305 @@
 ---
 /**
- * Harbor City Church — Homepage
+ * Harbor City Church — Homepage (Farewell)
  *
- * Ported from /Users/godfrey/Downloads/HCC-deploy/HCC_index_20260416.html
- * All inline styles refactored into the token system; body broken into
- * six section components under src/components/home/.
+ * Replaces the six-section home page with a closing message after the
+ * church's final gathering (September 13, 2026). The rest of the site —
+ * Our Story, Blog, ministries — remains intact and linked below.
  *
- * Source of truth: Build Brief v2.0 (OpenLibrary: 2f7f308e)
+ * The previous homepage is archived (OpenLibrary + repo history).
+ * Uses the real design tokens and the site's Nav/Footer via BaseLayout.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/home/Hero.astro';
-import OurStory from '../components/home/OurStory.astro';
-import VisionPromise from '../components/home/VisionPromise.astro';
-import Mission from '../components/home/Mission.astro';
-import ThisSunday from '../components/home/ThisSunday.astro';
-import GetConnected from '../components/home/GetConnected.astro';
-import PlanVisitCTA from '../components/home/PlanVisitCTA.astro';
+import SectionLabel from '../components/global/SectionLabel.astro';
 ---
 
 <BaseLayout
   title="Harbor City Church"
-  description="A community built on faith, rooted in love, and open to everyone. Harbor City Church — 715 E Ordnance Rd, Baltimore, MD. Come as you are."
+  description="After 25 years, Harbor City Church held its final gathering on September 13, 2026. Thank you, Baltimore."
   brand="main"
 >
-  <!-- Structured data for SEO -->
-  <Fragment slot="head">
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Church',
-        name: 'Harbor City Church',
-        url: 'https://harborcitychurch.com/',
-        logo: 'https://harborcitychurch.com/images/home/hcc-icon-blue.png',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '715 E Ordnance Rd',
-          addressLocality: 'Baltimore',
-          addressRegion: 'MD',
-          postalCode: '21226',
-          addressCountry: 'US',
-        },
-        openingHoursSpecification: [
-          {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: 'Sunday',
-            opens: '10:30',
-            closes: '12:00',
-          },
-        ],
-        sameAs: [
-          'https://facebook.com/harborcitymd',
-          'https://instagram.com/harborcitybaltimore',
-          'https://twitter.com/harborcitybalt',
-          'https://www.youtube.com/@harborcitychurch',
-        ],
-      })}
-    />
-  </Fragment>
+  <!-- FAREWELL HERO -->
+  <section class="farewell-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <p class="hero-label">Baltimore, Maryland &bull; 2001 – 2026</p>
+      <h1>Thank you, <em>Baltimore.</em></h1>
+      <p class="hero-sub">
+        After 25 years, Harbor City Church gathered for the last time on
+        September 13, 2026. What God did here — across this city, in these
+        people — will outlast any address.
+      </p>
+      <div class="stay">
+        <p class="stay-note">Something new is on the horizon.</p>
+        <span class="stay-pill">Stay tuned</span>
+      </div>
+    </div>
+  </section>
 
-  <Hero />
-  <OurStory />
-  <VisionPromise />
-  <Mission />
-  <ThisSunday />
-  <GetConnected />
-  <PlanVisitCTA />
+  <!-- THE SITE REMAINS -->
+  <section class="section remain reveal">
+    <div class="container-narrow remain-inner">
+      <SectionLabel>The doors have closed</SectionLabel>
+      <h2>Everything we built is still here.</h2>
+      <p>
+        Revisit the teaching, the writing, and the story any time. Come back
+        whenever you need to.
+      </p>
+      <div class="remain-links">
+        <a href="/our-story">
+          <span class="t">Our Story</span>
+          <span class="d">Where it began</span>
+        </a>
+        <a href="/blog">
+          <span class="t">The Blog</span>
+          <span class="d">Years of writing, still here</span>
+        </a>
+        <a href="https://www.youtube.com/@harborcitychurch">
+          <span class="t">Watch</span>
+          <span class="d">Messages to carry with you</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRATITUDE -->
+  <section class="section gratitude reveal">
+    <div class="container-narrow">
+      <blockquote>
+        “He who began a good work in you will carry it on to completion.”
+      </blockquote>
+      <cite>Philippians 1:6 &bull; With love and gratitude, Pastor Michael &amp; Lisa Collins</cite>
+    </div>
+  </section>
 </BaseLayout>
-–
+
+<style>
+  /* ---- Farewell hero: mirrors the real Hero component ---- */
+  .farewell-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--hero-gradient);
+    z-index: 0;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 42%, rgba(200, 169, 110, 0.1) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  }
+
+  /* faint horizon line — nods to the harbor */
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 58%;
+    height: 1px;
+    background: rgba(200, 169, 110, 0.28);
+    z-index: 1;
+  }
+
+  .hero-grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    padding: 0 24px;
+  }
+
+  .hero-label {
+    font-family: var(--hcc-font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.3s forwards;
+  }
+
+  .farewell-hero h1 {
+    font-family: var(--hcc-font-display);
+    font-size: clamp(48px, 8vw, 104px);
+    font-weight: 300;
+    color: var(--hcc-white);
+    line-height: 1.02;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  .farewell-hero h1 em {
+    font-style: italic;
+    color: var(--hcc-gold-light);
+  }
+
+  .hero-sub {
+    font-family: var(--hcc-font-sans);
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.7;
+    max-width: 540px;
+    margin: 0 auto 44px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.7s forwards;
+  }
+
+  .stay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+  }
+
+  .stay-note {
+    font-family: var(--hcc-font-display);
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 28px);
+    color: var(--hcc-white);
+  }
+
+  .stay-pill {
+    font-family: var(--hcc-font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--hcc-gold);
+    border: 1px solid rgba(200, 169, 110, 0.5);
+    border-radius: var(--radius-full);
+    padding: 8px 20px;
+  }
+
+  /* ---- The site remains ---- */
+  .remain {
+    background: var(--hcc-cream);
+    text-align: center;
+  }
+
+  .remain-inner h2 {
+    font-family: var(--hcc-font-display);
+    font-weight: 400;
+    font-size: var(--text-3xl);
+    color: var(--hcc-text);
+    line-height: var(--leading-tight);
+  }
+
+  .remain-inner > p {
+    font-family: var(--hcc-font-sans);
+    font-weight: 300;
+    font-size: var(--text-lg);
+    color: var(--hcc-text-light);
+    max-width: 46ch;
+    margin: 20px auto 0;
+  }
+
+  .remain-links {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(42, 37, 32, 0.12);
+    border: 1px solid rgba(42, 37, 32, 0.12);
+  }
+
+  .remain-links a {
+    background: var(--hcc-cream);
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-decoration: none;
+    transition:
+      background var(--duration-base) var(--ease-out),
+      color var(--duration-base) var(--ease-out);
+  }
+
+  .remain-links a .t {
+    font-family: var(--hcc-font-display);
+    font-weight: 400;
+    font-size: var(--text-xl);
+    color: var(--hcc-text);
+  }
+
+  .remain-links a .d {
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    color: var(--hcc-text-light);
+  }
+
+  .remain-links a:hover {
+    background: var(--hcc-midnight);
+  }
+
+  .remain-links a:hover .t {
+    color: var(--hcc-gold-light);
+  }
+
+  .remain-links a:hover .d {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  /* ---- Gratitude ---- */
+  .gratitude {
+    background: var(--hcc-white);
+    text-align: center;
+  }
+
+  .gratitude blockquote {
+    font-family: var(--hcc-font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: var(--text-2xl);
+    line-height: var(--leading-snug);
+    color: var(--hcc-text);
+    max-width: 24ch;
+    margin: 0 auto;
+  }
+
+  .gratitude cite {
+    display: block;
+    margin-top: 28px;
+    font-style: normal;
+    font-family: var(--hcc-font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--hcc-text-meta);
+  }
+
+  @media (max-width: 768px) {
+    .farewell-hero h1 {
+      font-size: 48px;
+    }
+    .remain-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
